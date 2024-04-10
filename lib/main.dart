@@ -28,7 +28,7 @@ class MainApp extends StatelessWidget {
       ),
     ).animate().fadeIn(
           delay: const Duration(milliseconds: 50),
-          duration: const Duration(milliseconds: 400),
+          duration: const Duration(milliseconds: 300),
         );
   }
 }
