@@ -50,7 +50,7 @@
   <style>
     
     body {
-      background-color: #0A0A0A;
+      background-color: #ffffff;
       height: 100vh;
       width: 100vw;
       position: fixed;
@@ -73,7 +73,7 @@
 
     img {
       width: 100px;
-      height: 100px;
+      height: 150px;
       position: absolute;
     }
 
@@ -84,10 +84,10 @@
 
     .loader {
       position: relative;
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+      background: linear-gradient(#ff7824, #7fcbfa, #1bfff7);
       animation: animate 1.2s linear infinite;
     }
 
@@ -106,7 +106,7 @@
       width: 100%;
       height: 100%;
       border-radius: 60%;
-      background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+      background: linear-gradient(#ff7824, #7fcbfa, #1bfff7);
     }
 
     .loader span:nth-child(1) {
@@ -132,7 +132,7 @@
       left: 10px;
       right: 10px;
       bottom: 10px;
-      background: #191919;
+      background: #ffffff;
       border-radius: 50%;
     }
   </style>
@@ -152,7 +152,7 @@
         return engineInitializer.initializeEngine();
       }).then(async function (appRunner) {
         loaderContent.style.opacity = "0";
-        await delay(400);
+        await delay(300);
         await appRunner.runApp();
       });
     });
@@ -164,7 +164,7 @@
       <span></span>
       <span></span>
     </div>
-    <img src="main-icon.png" />
+    <img src="kadosh-logo.png" />
   </div>
 </body>
 
