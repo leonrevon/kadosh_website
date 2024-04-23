@@ -13,8 +13,8 @@ class WebNavigationBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           SizedBox(
-            height: 295,
-            width: 189,
+            height: 200,
+            width: 100,
             child: Image.asset('assets/kadosh-logo.png'),
           ),
           Row(
@@ -22,9 +22,7 @@ class WebNavigationBar extends StatelessWidget {
             children: <Widget>[
               const _NavBarItem('Home'),
               horizontalSpaceLarge,
-              const _NavBarItem('About'),
-              horizontalSpaceLarge,
-              const _NavBarItem('Ministries'),
+              const _NavBarItem('Team'),
               horizontalSpaceLarge,
               const _NavBarItem('Videos'),
               isTablet ? horizontalSpaceSmall : horizontalSpaceMedium,

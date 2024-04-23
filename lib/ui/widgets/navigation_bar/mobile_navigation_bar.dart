@@ -18,8 +18,8 @@ class MobileNavigationBar extends StatelessWidget {
             icon: const Icon(Icons.menu),
           ),
           SizedBox(
-            height: 295,
-            width: 189,
+            height: 200,
+            width: 100,
             child: Image.asset('assets/kadosh-logo.png'),
           ),
         ],
