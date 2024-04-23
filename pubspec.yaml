@@ -27,6 +27,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/kadosh-logo.png
+    - assets/team.jpg
 
 fonts:
   - family: Open Sans

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/ui/common/app_colors.dart';
+import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/views/home/welcome_message.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/web_navigation_bar.dart';
 import 'package:stacked/stacked.dart';
@@ -11,12 +13,38 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
 
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
-    return const Scaffold(
+    return Scaffold(
         backgroundColor: kcPrimaryColor,
         body: CenteredView(
             isMobile: false,
-            child: WebNavigationBar(
-              isTablet: false,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const WebNavigationBar(
+                    isTablet: false,
+                  ),
+                  verticalSpaceMedium,
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: largeSize, right: largeSize),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          'assets/team.jpg',
+                          width: screenWidth(context) / 2 - largeSize * 2.5,
+                        ),
+                        SizedBox(
+                          width: screenWidth(context) / 2 - largeSize,
+                          child: const WelcomeMessage(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             )));
   }
 }
