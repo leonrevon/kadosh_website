@@ -11,9 +11,12 @@ class WelcomeMessage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Welcome To Kadosh!',
+          'WELCOME TO KADOSH',
           style: TextStyle(
-              fontWeight: FontWeight.w800, height: 0.9, fontSize: 40.0),
+            fontWeight: FontWeight.w800,
+            height: 0.9,
+            fontSize: 40.0,
+          ),
         ),
         verticalSpaceMedium,
 
