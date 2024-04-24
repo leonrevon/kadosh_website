@@ -29,10 +29,10 @@ flutter:
     - assets/kadosh-logo.png
     - assets/team.jpg
 
-fonts:
-  - family: Open Sans
-    fonts:
-      - asset: assets/fonts/OpenSans-ExtraBold.ttf
-        weight: 800
-      - asset: assets/fonts/OpenSans-Regular.ttf
-        weight: 400
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
