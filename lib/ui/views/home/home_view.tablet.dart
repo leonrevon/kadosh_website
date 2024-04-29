@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
-import 'package:kadosh_website/ui/views/home/welcome_message.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/web_navigation_bar.dart';
 import 'package:stacked/stacked.dart';
@@ -14,38 +12,70 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return Scaffold(
-        backgroundColor: kcPrimaryColor,
-        body: CenteredView(
-            isMobile: false,
-            child: SingleChildScrollView(
+      body: CenteredView(
+        isMobile: false,
+        child: Stack(
+          children: [
+            const Align(
+              alignment: Alignment.topCenter,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  WebNavigationBar(
+                    isTablet: true,
+                  ),
+                  Divider(),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const WebNavigationBar(
-                    isTablet: false,
-                  ),
-                  verticalSpaceMedium,
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: largeSize, right: largeSize),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          width: screenWidth(context),
-                          child: const WelcomeMessage(),
-                        ),
-                        verticalSpaceSmall,
-                        Image.asset(
-                          'assets/team.jpg',
+                  Stack(
+                    alignment: AlignmentDirectional.center,
+                    children: [
+                      Opacity(
+                        opacity: 0.2,
+                        child: Image.asset(
+                          'assets/orange-sky.jpg',
+                          fit: BoxFit.cover,
+                          height: screenHeight(context),
                           width: screenWidth(context),
                         ),
-                      ],
-                    ),
+                      ),
+                      Column(
+                        children: [
+                          Image.asset(
+                            'assets/kadosh-logo.png',
+                          ),
+                          verticalSpaceLarge,
+                          const Text(
+                            'MAKE DISCIPLE OF NATION...',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              height: 0.9,
+                              fontSize: 40.0,
+                            ),
+                          ),
+                          verticalSpaceMedium,
+                          const Text(
+                            'A group of friends, different origins, one destination - Kadosh.',
+                            style: TextStyle(
+                              fontSize: 21,
+                              height: 1.7,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
-            )));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

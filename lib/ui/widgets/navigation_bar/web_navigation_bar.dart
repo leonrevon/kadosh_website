@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 
@@ -9,29 +10,22 @@ class WebNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: largeSize, right: largeSize),
-      child: SizedBox(
-        height: 150,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(
-              height: 200,
-              width: 100,
-              child: Image.asset('assets/kadosh-logo.png'),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                const _NavBarItem('Home'),
-                horizontalSpaceLarge,
-                const _NavBarItem('Team'),
-                horizontalSpaceLarge,
-                const _NavBarItem('Videos'),
-                isTablet ? horizontalSpaceSmall : horizontalSpaceMedium,
-              ],
-            )
-          ],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Image.asset('assets/kadosh-title.png'),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              const _NavBarItem('Home'),
+              horizontalSpaceLarge,
+              const _NavBarItem('Team'),
+              horizontalSpaceLarge,
+              const _NavBarItem('Videos'),
+              isTablet ? horizontalSpaceSmall : horizontalSpaceMedium,
+            ],
+          )
+        ],
       ),
     );
   }
@@ -45,7 +39,9 @@ class _NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: const TextStyle(fontSize: 18),
+      style: const TextStyle(
+        fontSize: 18,
+      ),
     );
   }
 }
