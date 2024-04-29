@@ -6,24 +6,17 @@ class MobileNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          IconButton(
-            iconSize: mediumSize,
-            onPressed: () {},
-            icon: const Icon(Icons.menu),
-          ),
-          SizedBox(
-            height: 200,
-            width: 100,
-            child: Image.asset('assets/kadosh-logo.png'),
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        IconButton(
+          iconSize: mediumSize,
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
+        ),
+        Image.asset('assets/kadosh-title.png'),
+      ],
     );
   }
 }
