@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/web_navigation_bar.dart';
@@ -16,61 +17,70 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
         isMobile: false,
         child: Stack(
           children: [
-            const Align(
-              alignment: Alignment.topCenter,
-              child: Column(
-                children: [
-                  WebNavigationBar(
-                    isTablet: true,
-                  ),
-                  Divider(),
-                ],
+            SizedBox(
+              width: screenWidth(context),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: [
+                        Opacity(
+                          opacity: 0.2,
+                          child: Image.asset(
+                            'assets/orange-sky.jpg',
+                            fit: BoxFit.cover,
+                            height: screenHeight(context),
+                            width: screenWidth(context),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Image.asset(
+                              'assets/kadosh-logo.png',
+                            ),
+                            verticalSpaceLarge,
+                            const Text(
+                              'MAKE DISCIPLE OF NATION...',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                height: 0.9,
+                                fontSize: 40.0,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            verticalSpaceMedium,
+                            const Text(
+                              'A group of friends, different origins, one destination - Kadosh.',
+                              style: TextStyle(
+                                fontSize: 21,
+                                height: 1.7,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-            SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.center,
+            const Align(
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                height: 63,
+                child: ColoredBox(
+                  color: kcPrimaryColor,
+                  child: Column(
                     children: [
-                      Opacity(
-                        opacity: 0.2,
-                        child: Image.asset(
-                          'assets/orange-sky.jpg',
-                          fit: BoxFit.cover,
-                          height: screenHeight(context),
-                          width: screenWidth(context),
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Image.asset(
-                            'assets/kadosh-logo.png',
-                          ),
-                          verticalSpaceLarge,
-                          const Text(
-                            'MAKE DISCIPLE OF NATION...',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                              height: 0.9,
-                              fontSize: 40.0,
-                            ),
-                          ),
-                          verticalSpaceMedium,
-                          const Text(
-                            'A group of friends, different origins, one destination - Kadosh.',
-                            style: TextStyle(
-                              fontSize: 21,
-                              height: 1.7,
-                            ),
-                          ),
-                        ],
-                      ),
+                      WebNavigationBar(),
+                      Divider(),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
           ],

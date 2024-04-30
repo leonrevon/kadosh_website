@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/mobile_navigation_bar.dart';
@@ -16,32 +17,23 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
         isMobile: false,
         child: Stack(
           children: [
-            const Align(
-              alignment: Alignment.topCenter,
-              child: Column(
-                children: [
-                  MobileNavigationBar(),
-                  Divider(),
-                ],
-              ),
-            ),
-            SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.center,
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Opacity(
+                  opacity: 0.2,
+                  child: Image.asset(
+                    'assets/orange-sky.jpg',
+                    fit: BoxFit.cover,
+                    height: screenHeight(context),
+                    width: screenWidth(context),
+                  ),
+                ),
+                SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Opacity(
-                        opacity: 0.2,
-                        child: Image.asset(
-                          'assets/orange-sky.jpg',
-                          fit: BoxFit.cover,
-                          height: screenHeight(context),
-                          width: screenWidth(context),
-                        ),
-                      ),
                       Column(
                         children: [
                           Image.asset(
@@ -70,7 +62,22 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                       ),
                     ],
                   ),
-                ],
+                ),
+              ],
+            ),
+            const Align(
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                height: 63,
+                child: ColoredBox(
+                  color: kcPrimaryColor,
+                  child: Column(
+                    children: [
+                      MobileNavigationBar(),
+                      Divider(),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
