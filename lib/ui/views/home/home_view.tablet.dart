@@ -43,7 +43,7 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
                             ),
                             verticalSpaceLarge,
                             const Text(
-                              'MAKE DISCIPLE OF NATION...',
+                              'MAKE DISCIPLES OF NATIONS...',
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 height: 0.9,
