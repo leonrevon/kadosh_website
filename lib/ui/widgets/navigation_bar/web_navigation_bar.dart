@@ -3,8 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 
 class WebNavigationBar extends StatelessWidget {
-  final bool isTablet;
-  const WebNavigationBar({super.key, required this.isTablet});
+  const WebNavigationBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +11,19 @@ class WebNavigationBar extends StatelessWidget {
       padding: const EdgeInsets.only(left: largeSize, right: largeSize),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
+        children: [
           Image.asset('assets/kadosh-title.png'),
-          Row(
+          const Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              const _NavBarItem('Home'),
+              _NavBarItem('Home'),
               horizontalSpaceLarge,
-              const _NavBarItem('Team'),
+              _NavBarItem('About'),
               horizontalSpaceLarge,
-              const _NavBarItem('Videos'),
-              isTablet ? horizontalSpaceSmall : horizontalSpaceMedium,
+              _NavBarItem('Team'),
+              horizontalSpaceLarge,
+              _NavBarItem('Videos'),
+              horizontalSpaceMedium,
             ],
           )
         ],
