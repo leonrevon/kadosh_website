@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kadosh_website/app/app.locator.dart';
+import 'package:kadosh_website/app/app.router.dart';
+import 'package:kadosh_website/extensions/hover_extensions.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class WebNavigationBar extends StatelessWidget {
-  final bool isTablet;
-  const WebNavigationBar({super.key, required this.isTablet});
+  const WebNavigationBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +15,19 @@ class WebNavigationBar extends StatelessWidget {
       padding: const EdgeInsets.only(left: largeSize, right: largeSize),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
+        children: [
           Image.asset('assets/kadosh-title.png'),
-          Row(
+          const Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              const _NavBarItem('Home'),
+              _NavBarItem('Home'),
               horizontalSpaceLarge,
-              const _NavBarItem('Team'),
+              _NavBarItem('About'),
               horizontalSpaceLarge,
-              const _NavBarItem('Videos'),
-              isTablet ? horizontalSpaceSmall : horizontalSpaceMedium,
+              _NavBarItem('Team'),
+              horizontalSpaceLarge,
+              _NavBarItem('Videos'),
+              horizontalSpaceMedium,
             ],
           )
         ],
@@ -37,11 +42,27 @@ class _NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-        fontSize: 18,
+    final routerService = locator<RouterService>();
+    return GestureDetector(
+      onTap: () => _navigateTo(title, routerService: routerService),
+      child: Text(
+        title,
+        style: const TextStyle(
+          fontSize: 18,
+        ),
       ),
-    );
+    ).moveOnHover(y: -5.0).scaleOnHover(scale: 1.2);
+  }
+
+  _navigateTo(String title, {required RouterService routerService}) {
+    switch (title) {
+      case 'Home':
+        routerService.navigateToHomeView();
+      case 'About':
+        routerService.replaceWithAboutView();
+      //TODO: other navigation tab
+      default:
+        routerService.navigateToHomeView();
+    }
   }
 }

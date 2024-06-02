@@ -1,5 +1,6 @@
 import 'package:kadosh_website/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:kadosh_website/ui/dialogs/info_alert/info_alert_dialog.dart';
+import 'package:kadosh_website/ui/views/about/about_view.dart';
 import 'package:kadosh_website/ui/views/home/home_view.dart';
 import 'package:kadosh_website/ui/views/startup/startup_view.dart';
 import 'package:kadosh_website/ui/views/unknown/unknown_view.dart';
@@ -11,7 +12,8 @@ import 'package:stacked_services/stacked_services.dart';
   routes: [
     CustomRoute(page: StartupView, initial: true),
     CustomRoute(page: HomeView),
-    // @stacked-route
+    CustomRoute(page: AboutView),
+// @stacked-route
 
     CustomRoute(page: UnknownView, path: '/404'),
 
