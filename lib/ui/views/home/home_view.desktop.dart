@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
-import 'package:kadosh_website/ui/widgets/navigation_bar/web_navigation_bar.dart';
+import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -13,6 +12,24 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset('assets/kadosh-title.png'),
+        actions: const [
+          NavBarItem('Home'),
+          horizontalSpaceLarge,
+          NavBarItem('About'),
+          horizontalSpaceLarge,
+          NavBarItem('Team'),
+          horizontalSpaceLarge,
+          NavBarItem('Videos'),
+          horizontalSpaceMedium,
+        ],
+        automaticallyImplyLeading: false,
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(1),
+          child: Divider(height: 1),
+        ),
+      ),
       body: CenteredView(
         isMobile: false,
         child: Stack(
@@ -27,54 +44,36 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
                 width: screenWidth(context),
               ),
             ),
-            SizedBox(
-              width: screenWidth(context),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/kadosh-logo.png',
-                        ),
-                        verticalSpaceLarge,
-                        const Text(
-                          'MAKE DISCIPLES OF NATIONS...',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            height: 0.9,
-                            fontSize: 40.0,
-                          ),
-                        ),
-                        verticalSpaceMedium,
-                        const Text(
-                          'A group of friends, different origins, one destination - Kadosh.',
-                          style: TextStyle(
-                            fontSize: 21,
-                            height: 1.7,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                height: 63,
-                child: ColoredBox(
-                  color: kcPrimaryColor,
-                  child: Column(
+            SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
                     children: [
-                      WebNavigationBar(),
-                      Divider(),
+                      Image.asset(
+                        'assets/kadosh-logo.png',
+                      ),
+                      verticalSpaceLarge,
+                      const Text(
+                        'MAKE DISCIPLES OF NATIONS...',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          height: 0.9,
+                          fontSize: 40.0,
+                        ),
+                      ),
+                      verticalSpaceMedium,
+                      const Text(
+                        'A group of friends, different origins, one destination - Kadosh.',
+                        style: TextStyle(
+                          fontSize: 21,
+                          height: 1.7,
+                        ),
+                      ),
                     ],
                   ),
-                ),
+                ],
               ),
             ),
           ],
