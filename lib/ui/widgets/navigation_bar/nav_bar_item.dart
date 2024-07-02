@@ -3,42 +3,11 @@ import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
-import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked_services/stacked_services.dart';
 
-class WebNavigationBar extends StatelessWidget {
-  const WebNavigationBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: largeSize, right: largeSize),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset('assets/kadosh-title.png'),
-          const Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              _NavBarItem('Home'),
-              horizontalSpaceLarge,
-              _NavBarItem('About'),
-              horizontalSpaceLarge,
-              _NavBarItem('Team'),
-              horizontalSpaceLarge,
-              _NavBarItem('Videos'),
-              horizontalSpaceMedium,
-            ],
-          )
-        ],
-      ),
-    );
-  }
-}
-
-class _NavBarItem extends StatelessWidget {
+class NavBarItem extends StatelessWidget {
   final String title;
-  const _NavBarItem(this.title);
+  const NavBarItem(this.title, {super.key});
 
   @override
   Widget build(BuildContext context) {

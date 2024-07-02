@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
-import 'package:kadosh_website/ui/widgets/navigation_bar/web_navigation_bar.dart';
+import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -13,6 +12,24 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset('assets/kadosh-title.png'),
+        actions: const [
+          NavBarItem('Home'),
+          horizontalSpaceLarge,
+          NavBarItem('About'),
+          horizontalSpaceLarge,
+          NavBarItem('Team'),
+          horizontalSpaceLarge,
+          NavBarItem('Videos'),
+          horizontalSpaceMedium,
+        ],
+        automaticallyImplyLeading: false,
+        bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(1),
+          child: Divider(height: 1),
+        ),
+      ),
       body: CenteredView(
         isMobile: false,
         child: Stack(
@@ -65,21 +82,6 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
                       ],
                     ),
                   ],
-                ),
-              ),
-            ),
-            const Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                height: 63,
-                child: ColoredBox(
-                  color: kcPrimaryColor,
-                  child: Column(
-                    children: [
-                      WebNavigationBar(),
-                      Divider(),
-                    ],
-                  ),
                 ),
               ),
             ),
