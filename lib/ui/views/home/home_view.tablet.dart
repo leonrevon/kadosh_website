@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
+import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
 import 'package:stacked/stacked.dart';
 
@@ -88,6 +89,7 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
           ],
         ),
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 }
