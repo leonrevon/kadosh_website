@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
+import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
 import 'package:stacked/stacked.dart';
 
@@ -54,7 +55,7 @@ class AboutViewDesktop extends ViewModelWidget<AboutViewModel> {
                     Column(
                       children: [
                         Text(
-                          '(Need input from Aires and Sandra) -- one liner',
+                          'As for me and my household, we shall serve the Lord.',
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             height: 0.9,
@@ -78,6 +79,7 @@ class AboutViewDesktop extends ViewModelWidget<AboutViewModel> {
           ],
         ),
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 }
