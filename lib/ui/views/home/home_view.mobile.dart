@@ -69,21 +69,21 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                           Image.asset(
                             'assets/kadosh-logo.png',
                           ),
-                          verticalSpaceLarge,
-                          const Text(
+                          verticalSpaceMedium,
+                          Text(
                             'MAKE DISCIPLES OF NATIONS...',
                             style: TextStyle(
                               fontWeight: FontWeight.w800,
                               height: 0.9,
-                              fontSize: 30.0,
+                              fontSize: getResponsiveMassiveFontSize(context),
                             ),
                             textAlign: TextAlign.center,
                           ),
                           verticalSpaceSmall,
-                          const Text(
+                          Text(
                             'A group of friends, different origins, one destination - Kadosh.',
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: getResponsiveLargeFontSize(context),
                               height: 1.7,
                             ),
                             textAlign: TextAlign.center,

@@ -26,13 +26,13 @@ class AboutViewMobile extends ViewModelWidget<AboutViewModel> {
                 children: [],
               ),
             ),
-            ListTile(title: NavBarItem('Home')),
+            ListTile(title: NavBarItem('Home', isMobile: true)),
             verticalSpaceSmall,
-            ListTile(title: NavBarItem('About')),
+            ListTile(title: NavBarItem('About', isMobile: true)),
             verticalSpaceSmall,
-            ListTile(title: NavBarItem('Team')),
+            ListTile(title: NavBarItem('Team', isMobile: true)),
             verticalSpaceSmall,
-            ListTile(title: NavBarItem('Videos')),
+            ListTile(title: NavBarItem('Videos', isMobile: true)),
           ],
         ),
       ),
@@ -59,7 +59,7 @@ class AboutViewMobile extends ViewModelWidget<AboutViewModel> {
             ),
             SizedBox(
               width: screenWidth(context) * 4 / 5,
-              child: const SingleChildScrollView(
+              child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -72,14 +72,14 @@ class AboutViewMobile extends ViewModelWidget<AboutViewModel> {
                           style: TextStyle(
                             fontWeight: FontWeight.w800,
                             height: 0.9,
-                            fontSize: 20.0,
+                            fontSize: getResponsiveMassiveFontSize(context),
                           ),
                         ),
                         verticalSpaceMedium,
                         Text(
                           'Vision Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say "YES" to the call of Jesus, actively transforming themselves, the Church, and society. Mission Our mission is to create welcoming and prayerful spaces where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of the Most High God. By embracing this identity, we empower them to live holy lives and become passionate followers of Jesus. Additionally, we seek to equip and shape these young leaders, sending them forth to fulfill God\'s plan for their lives and positively impact the world around them.',
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: getResponsiveLargeFontSize(context),
                             height: 1.7,
                           ),
                         ),

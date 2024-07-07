@@ -3,11 +3,13 @@ import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
+import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
-  const NavBarItem(this.title, {super.key});
+  final bool isMobile;
+  const NavBarItem(this.title, {super.key, this.isMobile = false});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,10 @@ class NavBarItem extends StatelessWidget {
       onTap: () => _navigateTo(title, routerService: routerService),
       child: Text(
         title,
-        style: const TextStyle(
-          fontSize: 18,
+        style: TextStyle(
+          fontSize: isMobile
+              ? getResponsiveExtraLargeFontSize(context)
+              : getResponsiveMediumFontSize(context),
         ),
       ),
     ).moveOnHover(y: -5.0).scaleOnHover(scale: 1.2);
