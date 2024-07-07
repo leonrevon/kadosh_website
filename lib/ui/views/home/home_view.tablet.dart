@@ -59,21 +59,21 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
                             Image.asset(
                               'assets/kadosh-logo.png',
                             ),
-                            verticalSpaceLarge,
-                            const Text(
+                            verticalSpaceMedium,
+                            Text(
                               'MAKE DISCIPLES OF NATIONS...',
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 height: 0.9,
-                                fontSize: 40.0,
+                                fontSize: getResponsiveLargeFontSize(context),
                               ),
                               textAlign: TextAlign.center,
                             ),
                             verticalSpaceMedium,
-                            const Text(
+                            Text(
                               'A group of friends, different origins, one destination - Kadosh.',
                               style: TextStyle(
-                                fontSize: 21,
+                                fontSize: getResponsiveMediumFontSize(context),
                                 height: 1.7,
                               ),
                               textAlign: TextAlign.center,
