@@ -16,8 +16,13 @@ class _FooterItemState extends State<FooterItem> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => url_launcher.launchUrl(widget.url,
-          mode: LaunchMode.externalApplication),
+      onTap: () {
+        setState(() {
+          isHovered = false;
+        });
+        url_launcher.launchUrl(widget.url,
+            mode: LaunchMode.externalApplication);
+      },
       child: MouseRegion(
           onHover: (e) {
             setState(() {
