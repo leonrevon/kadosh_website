@@ -20,8 +20,8 @@ class NavBarItem extends StatelessWidget {
         title,
         style: TextStyle(
           fontSize: isMobile
-              ? getResponsiveExtraLargeFontSize(context)
-              : getResponsiveMediumFontSize(context),
+              ? getResponsiveLargeFontSize(context)
+              : getResponsiveSmallFontSize(context),
         ),
       ),
     ).moveOnHover(y: -5.0).scaleOnHover(scale: 1.2);
