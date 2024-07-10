@@ -16,10 +16,12 @@ class _FooterItemState extends State<FooterItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        _launchURL(widget.url);
-        setState(() {
-          isHovered = false;
+        Future.delayed(const Duration(milliseconds: 500), () {
+          setState(() {
+            isHovered = false;
+          });
         });
+        _launchURL(widget.url);
       },
       child: MouseRegion(
           onHover: (e) {
