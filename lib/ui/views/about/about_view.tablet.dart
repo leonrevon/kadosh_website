@@ -61,14 +61,16 @@ class AboutViewTablet extends ViewModelWidget<AboutViewModel> {
                             height: 0.9,
                             fontSize: getResponsiveLargeFontSize(context),
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                         verticalSpaceMedium,
                         Text(
                           'Vision Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say "YES" to the call of Jesus, actively transforming themselves, the Church, and society. Mission Our mission is to create welcoming and prayerful spaces where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of the Most High God. By embracing this identity, we empower them to live holy lives and become passionate followers of Jesus. Additionally, we seek to equip and shape these young leaders, sending them forth to fulfill God\'s plan for their lives and positively impact the world around them.',
                           style: TextStyle(
-                            fontSize: getResponsiveMediumFontSize(context),
+                            fontSize: getResponsiveSmallFontSize(context),
                             height: 1.7,
                           ),
+                          textAlign: TextAlign.justify,
                         ),
                       ],
                     ),

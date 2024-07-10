@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as url_launcher;
+import 'package:url_launcher/url_launcher_string.dart';
 
 class FooterItem extends StatefulWidget {
   final IconData iconData;
@@ -15,7 +16,8 @@ class _FooterItemState extends State<FooterItem> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => url_launcher.launchUrl(widget.url),
+      onTap: () => url_launcher.launchUrl(widget.url,
+          mode: LaunchMode.externalApplication),
       child: MouseRegion(
           onHover: (e) {
             setState(() {

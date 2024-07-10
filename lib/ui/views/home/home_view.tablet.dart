@@ -73,7 +73,7 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
                             Text(
                               'A group of friends, different origins, one destination - Kadosh.',
                               style: TextStyle(
-                                fontSize: getResponsiveMediumFontSize(context),
+                                fontSize: getResponsiveLargeFontSize(context),
                                 height: 1.7,
                               ),
                               textAlign: TextAlign.center,
