@@ -52,19 +52,19 @@ double quarterScreenWidth(BuildContext context) =>
 double getResponsiveHorizontalSpaceMedium(BuildContext context) =>
     screenWidthFraction(context, dividedBy: 10);
 double getResponsiveSmallFontSize(BuildContext context) =>
-    getResponsiveFontSize(context, fontSize: 14, max: 15);
+    getResponsiveFontSize(context, fontSize: 14, max: 30);
 
 double getResponsiveMediumFontSize(BuildContext context) =>
-    getResponsiveFontSize(context, fontSize: 16, max: 17);
+    getResponsiveFontSize(context, fontSize: 16, max: 40);
 
 double getResponsiveLargeFontSize(BuildContext context) =>
-    getResponsiveFontSize(context, fontSize: 21, max: 31);
+    getResponsiveFontSize(context, fontSize: 21, max: 50);
 
 double getResponsiveExtraLargeFontSize(BuildContext context) =>
-    getResponsiveFontSize(context, fontSize: 25);
+    getResponsiveFontSize(context, fontSize: 50);
 
 double getResponsiveMassiveFontSize(BuildContext context) =>
-    getResponsiveFontSize(context, fontSize: 30);
+    getResponsiveFontSize(context, fontSize: 70);
 
 double getResponsiveFontSize(BuildContext context,
     {double? fontSize, double? max}) {

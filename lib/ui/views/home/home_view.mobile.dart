@@ -53,7 +53,8 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                             style: TextStyle(
                               fontWeight: FontWeight.w800,
                               height: 0.9,
-                              fontSize: getResponsiveMassiveFontSize(context),
+                              fontSize:
+                                  getResponsiveExtraLargeFontSize(context),
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -61,7 +62,8 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                           Text(
                             'A group of friends, different origins, one destination - Kadosh.',
                             style: TextStyle(
-                              fontSize: getResponsiveLargeFontSize(context),
+                              fontSize:
+                                  getResponsiveExtraLargeFontSize(context),
                               height: 1.7,
                             ),
                             textAlign: TextAlign.center,
