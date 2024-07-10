@@ -24,7 +24,7 @@ class _FooterItemState extends State<FooterItem> {
         _launchURL(widget.url);
       },
       child: MouseRegion(
-          onHover: (e) {
+          onEnter: (e) {
             setState(() {
               isHovered = true;
             });
