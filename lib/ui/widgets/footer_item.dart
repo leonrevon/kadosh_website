@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart' as url_launcher;
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FooterItem extends StatefulWidget {
   final IconData iconData;
@@ -17,11 +16,10 @@ class _FooterItemState extends State<FooterItem> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        _launchURL(widget.url);
         setState(() {
           isHovered = false;
         });
-        url_launcher.launchUrl(widget.url,
-            mode: LaunchMode.externalApplication);
       },
       child: MouseRegion(
           onHover: (e) {
@@ -36,6 +34,14 @@ class _FooterItemState extends State<FooterItem> {
           },
           child: _buildIcon(widget.iconData, isHovered)),
     );
+  }
+
+  void _launchURL(Uri url) async {
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
 
