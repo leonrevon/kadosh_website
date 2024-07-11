@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/app/app.locator.dart';
+import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 import 'about_viewmodel.dart';
 
@@ -14,7 +17,10 @@ class AboutViewTablet extends ViewModelWidget<AboutViewModel> {
   Widget build(BuildContext context, AboutViewModel viewModel) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/kadosh-title.png'),
+        title: GestureDetector(
+          onTap: () => locator<RouterService>().navigateToHomeView(),
+          child: Image.asset('assets/kadosh-title.png'),
+        ),
         actions: const [
           NavBarItem('Home'),
           horizontalSpaceLarge,
