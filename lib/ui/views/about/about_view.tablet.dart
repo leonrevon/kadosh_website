@@ -38,7 +38,6 @@ class AboutViewTablet extends ViewModelWidget<AboutViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           alignment: Alignment.center,
           children: [

@@ -32,7 +32,6 @@ class HomeViewTablet extends ViewModelWidget<HomeViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           children: [
             SizedBox(

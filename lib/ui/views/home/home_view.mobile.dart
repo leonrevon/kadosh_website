@@ -22,7 +22,6 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           children: [
             Stack(

@@ -28,7 +28,6 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           alignment: Alignment.center,
           children: [

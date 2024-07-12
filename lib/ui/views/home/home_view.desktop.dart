@@ -32,7 +32,6 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           alignment: Alignment.center,
           children: [

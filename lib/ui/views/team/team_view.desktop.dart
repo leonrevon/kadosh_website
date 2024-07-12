@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
@@ -40,7 +39,6 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
         ),
       ),
       body: CenteredView(
-        isMobile: false,
         child: Stack(
           alignment: Alignment.center,
           children: [
