@@ -32,10 +32,11 @@ class NavBarItem extends StatelessWidget {
       case 'Home':
         routerService.navigateToHomeView();
       case 'About':
-        routerService.replaceWithAboutView();
-      //TODO: other navigation tab
+        routerService.navigateToAboutView();
+      case 'Team':
+        routerService.navigateToTeamView();
       default:
-        routerService.navigateToHomeView();
+        routerService.navigateToStartupView();
     }
   }
 }
