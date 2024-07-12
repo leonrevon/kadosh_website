@@ -21,7 +21,7 @@ class AboutViewDesktop extends ViewModelWidget<AboutViewModel> {
         title: GestureDetector(
           onTap: () => locator<RouterService>().navigateToHomeView(),
           child: Image.asset('assets/kadosh-title.png'),
-        ).moveOnHover(),
+        ).moveOnHover(y: -5),
         actions: const [
           NavBarItem('Home'),
           horizontalSpaceLarge,
