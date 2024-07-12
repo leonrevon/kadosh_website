@@ -29,7 +29,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
       ),
       body: CenteredView(
         child: Stack(
-          alignment: Alignment.center,
+          alignment: Alignment.topCenter,
           children: [
             Opacity(
               opacity: 0.2,
@@ -44,7 +44,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
               width: screenWidth(context) * 4 / 5,
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: smallSize),
+                  padding: const EdgeInsets.symmetric(vertical: mediumSize),
                   child: Column(
                     children: [
                       ClipRRect(
