@@ -45,7 +45,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
               width: screenWidth(context) * 4 / 5,
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: largeSize),
+                  padding: const EdgeInsets.symmetric(vertical: smallSize),
                   child: Column(
                     children: [
                       ClipRRect(
