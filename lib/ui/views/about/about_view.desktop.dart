@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
+import 'package:kadosh_website/extensions/hover_extensions.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
@@ -20,7 +21,7 @@ class AboutViewDesktop extends ViewModelWidget<AboutViewModel> {
         title: GestureDetector(
           onTap: () => locator<RouterService>().navigateToHomeView(),
           child: Image.asset('assets/kadosh-title.png'),
-        ),
+        ).moveOnHover(),
         actions: const [
           NavBarItem('Home'),
           horizontalSpaceLarge,
