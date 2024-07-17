@@ -33,6 +33,7 @@ flutter:
     - assets/team.jpg
     - assets/community.png
     - assets/orange-sky.jpg
+    - assets/placeholder_profile.png
 
   fonts:
     - family: Open Sans

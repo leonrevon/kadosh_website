@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
+import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/mobile_drawer_navigation.dart';
@@ -48,7 +50,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
                   child: Column(
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(25.0),
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset('assets/team.jpg',
                             width: MediaQuery.of(context).size.width * 0.9),
                       ),
@@ -62,14 +64,59 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      verticalSpaceMedium,
-                      Text(
-                        'Team-Text',
-                        style: TextStyle(
-                          fontSize: getResponsiveLargeFontSize(context),
-                          height: 1.7,
-                        ),
-                        textAlign: TextAlign.justify,
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        airesProfile,
+                        airesProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        sandraProfile,
+                        sandraProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        shandoProfile,
+                        shandoProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        savioProfile,
+                        savioProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        leonProfile,
+                        leonProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        dibinProfile,
+                        dibinProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
                       ),
                     ],
                   ),
