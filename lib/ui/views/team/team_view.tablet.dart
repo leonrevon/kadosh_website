@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
+import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
@@ -54,34 +56,81 @@ class TeamViewTablet extends ViewModelWidget<TeamViewModel> {
             SizedBox(
               width: screenWidth(context) * 4 / 5,
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    verticalSpaceLarge,
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(25.0),
-                      child: Image.asset('assets/team.jpg',
-                          width: MediaQuery.of(context).size.width * 0.7),
-                    ),
-                    verticalSpaceLarge,
-                    Text(
-                      'Meet The Team',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w800,
-                        height: 0.9,
-                        fontSize: getResponsiveLargeFontSize(context),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: mediumSize),
+                  child: Column(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset('assets/team.jpg',
+                            width: MediaQuery.of(context).size.width * 0.6),
                       ),
-                      textAlign: TextAlign.center,
-                    ),
-                    verticalSpaceMedium,
-                    Text(
-                      'Team-Text',
-                      style: TextStyle(
-                        fontSize: getResponsiveSmallFontSize(context),
-                        height: 1.7,
+                      verticalSpaceMedium,
+                      Text(
+                        'Meet The Team',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          height: 0.9,
+                          fontSize: getResponsiveExtraLargeFontSize(context),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.justify,
-                    ),
-                  ],
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        airesProfile,
+                        airesProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        sandraProfile,
+                        sandraProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        shandoProfile,
+                        shandoProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        savioProfile,
+                        savioProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        leonProfile,
+                        leonProfileText,
+                        isMirrored: false,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                      verticalSpaceSmall,
+                      const Divider(),
+                      verticalSpaceSmall,
+                      ProfileWidget(
+                        dibinProfile,
+                        dibinProfileText,
+                        isMirrored: true,
+                        fontSize: getResponsiveMediumFontSize(context),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

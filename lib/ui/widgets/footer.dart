@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/footer_item.dart';
-import 'package:kadosh_website/url_constants.dart';
+import 'package:kadosh_website/helpers/url_constants.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key});
