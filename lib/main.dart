@@ -25,6 +25,7 @@ class MainApp extends StatelessWidget {
       builder: (_) => MaterialApp.router(
           routerDelegate: stackedRouter.delegate(),
           routeInformationParser: stackedRouter.defaultRouteParser(),
+          themeMode: ThemeMode.light,
           theme: ThemeData(
             textTheme:
                 Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
