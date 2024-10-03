@@ -54,18 +54,48 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
               ),
             ),
             SizedBox(
-              width: screenWidth(context) * 4 / 5,
+              width: screenWidth(context) * 0.6,
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: mediumSize),
                   child: Column(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset('assets/team.jpg',
-                            width: MediaQuery.of(context).size.width * 0.6),
+                      verticalSpaceLarge,
+                      Text(
+                        'In the beginning...',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          height: 0.9,
+                          fontSize: getResponsiveMediumFontSize(context),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
                       verticalSpaceMedium,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset('assets/aires_sandra.jpg',
+                            width: MediaQuery.of(context).size.width * 0.5),
+                      ),
+                      verticalSpaceMedium,
+                      Text(
+                        'Aires & Sandra',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          height: 0.9,
+                          fontSize: getResponsiveMediumFontSize(context),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      verticalSpaceMedium,
+                      Text(
+                        'Some story text and explanation of kadosh~!',
+                        style: TextStyle(
+                          height: 1.0,
+                          fontSize: getResponsiveSmallFontSize(context),
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      verticalSpaceLarge,
                       Text(
                         'Meet The Team',
                         style: TextStyle(
@@ -75,6 +105,13 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
                         ),
                         textAlign: TextAlign.center,
                       ),
+                      verticalSpaceMedium,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset('assets/team.png',
+                            width: MediaQuery.of(context).size.width * 0.6),
+                      ),
+                      verticalSpaceMedium,
                       verticalSpaceSmall,
                       const Divider(),
                       verticalSpaceSmall,
