@@ -31,9 +31,11 @@ flutter:
     - assets/kadosh-logo.png
     - assets/kadosh-title.png
     - assets/team.jpg
+    - assets/team.png
     - assets/community.png
     - assets/orange-sky.jpg
     - assets/placeholder_profile.png
+    - assets/aires_sandra.jpg
 
   fonts:
     - family: Open Sans

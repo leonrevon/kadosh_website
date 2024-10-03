@@ -48,7 +48,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
                           ),
                           verticalSpaceMedium,
                           Text(
-                            'MAKE DISCIPLES OF NATIONS...',
+                            'MAKE DISCIPLES OF ALL NATIONS',
                             style: TextStyle(
                               fontWeight: FontWeight.w800,
                               height: 0.9,
