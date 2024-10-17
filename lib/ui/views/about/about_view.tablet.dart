@@ -28,7 +28,7 @@ class AboutViewTablet extends ViewModelWidget<AboutViewModel> {
           horizontalSpaceLarge,
           NavBarItem('Team'),
           horizontalSpaceLarge,
-          NavBarItem('Videos'),
+          NavBarItem('Events'),
           horizontalSpaceMedium,
         ],
         automaticallyImplyLeading: false,

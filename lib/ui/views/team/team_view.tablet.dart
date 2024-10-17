@@ -31,7 +31,7 @@ class TeamViewTablet extends ViewModelWidget<TeamViewModel> {
           horizontalSpaceLarge,
           NavBarItem('Team'),
           horizontalSpaceLarge,
-          NavBarItem('Videos'),
+          NavBarItem('Events'),
           horizontalSpaceMedium,
         ],
         automaticallyImplyLeading: false,
