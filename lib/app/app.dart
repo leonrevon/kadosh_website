@@ -7,6 +7,7 @@ import 'package:kadosh_website/ui/views/unknown/unknown_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:kadosh_website/ui/views/team/team_view.dart';
+import 'package:kadosh_website/ui/views/events/events_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -15,6 +16,7 @@ import 'package:kadosh_website/ui/views/team/team_view.dart';
     CustomRoute(page: HomeView),
     CustomRoute(page: AboutView),
     CustomRoute(page: TeamView),
+    CustomRoute(page: EventsView),
 // @stacked-route
 
     CustomRoute(page: UnknownView, path: '/404'),

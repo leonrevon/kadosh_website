@@ -35,6 +35,8 @@ class NavBarItem extends StatelessWidget {
         routerService.navigateToAboutView();
       case 'Team':
         routerService.navigateToTeamView();
+      case 'Events':
+        routerService.navigateToEventsView();
       default:
         routerService.navigateToStartupView();
     }

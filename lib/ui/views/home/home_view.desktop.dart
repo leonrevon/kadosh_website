@@ -22,7 +22,7 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
           horizontalSpaceLarge,
           NavBarItem('Team'),
           horizontalSpaceLarge,
-          NavBarItem('Videos'),
+          NavBarItem('Events'),
           horizontalSpaceMedium,
         ],
         automaticallyImplyLeading: false,

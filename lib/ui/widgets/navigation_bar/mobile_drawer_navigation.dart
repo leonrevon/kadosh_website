@@ -26,7 +26,7 @@ class MobileDrawer extends StatelessWidget {
           verticalSpaceSmall,
           ListTile(title: NavBarItem('Team', isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem('Videos', isMobile: true)),
+          ListTile(title: NavBarItem('Events', isMobile: true)),
         ],
       ),
     );
