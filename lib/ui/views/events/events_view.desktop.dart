@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
+import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 
 import 'events_viewmodel.dart';
@@ -8,14 +10,18 @@ class EventsViewDesktop extends ViewModelWidget<EventsViewModel> {
 
   @override
   Widget build(BuildContext context, EventsViewModel viewModel) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Hello, DESKTOP UI!',
-          style: TextStyle(
-            fontSize: 35,
-            fontWeight: FontWeight.w900,
-          ),
+    return KadoshScaffold(
+      bodyContent: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: mediumSize),
+              child: Image.asset(
+                'assets/first_friday_poster/november.jpg',
+                height: getResponsiveHorizontalSpaceLarge(context),
+              ),
+            ),
+          ],
         ),
       ),
     );

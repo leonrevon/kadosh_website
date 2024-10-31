@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_mobile_page.dart';
+import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
 
 import 'events_viewmodel.dart';
@@ -8,14 +10,15 @@ class EventsViewTablet extends ViewModelWidget<EventsViewModel> {
 
   @override
   Widget build(BuildContext context, EventsViewModel viewModel) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'Hello, TABLET UI!',
-          style: TextStyle(
-            fontSize: 35,
-            fontWeight: FontWeight.w900,
-          ),
+    return KadoshScaffoldMobile(
+      bodyContent: Center(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/first_friday_poster/november.jpg',
+              height: screenWidthFraction(context),
+            ),
+          ],
         ),
       ),
     );
