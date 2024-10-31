@@ -17,7 +17,7 @@ class EventsViewDesktop extends ViewModelWidget<EventsViewModel> {
             Padding(
               padding: const EdgeInsets.only(top: mediumSize),
               child: Image.asset(
-                'assets/first_friday_poster/november.jp',
+                'assets/first_friday_poster/november.jpg',
                 height: getResponsiveHorizontalSpaceLarge(context),
               ),
             ),
