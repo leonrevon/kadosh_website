@@ -28,6 +28,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/first_friday_poster/december.png
     - assets/first_friday_poster/november.jpg
     - assets/kadosh-logo.png
     - assets/kadosh-title.png

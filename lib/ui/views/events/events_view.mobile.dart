@@ -15,7 +15,7 @@ class EventsViewMobile extends ViewModelWidget<EventsViewModel> {
         child: Column(
           children: [
             Image.asset(
-              'assets/first_friday_poster/november.jpg',
+              'assets/first_friday_poster/december.png',
               height: screenWidthFraction(context),
             ),
           ],
