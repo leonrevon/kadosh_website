@@ -1,8 +1,8 @@
-const String leonProfile = 'assets/placeholder_profile.png';
-const String airesProfile = 'assets/placeholder_profile.png';
-const String sandraProfile = 'assets/placeholder_profile.png';
-const String shandoProfile = 'assets/placeholder_profile.png';
-const String savioProfile = 'assets/placeholder_profile.png';
+const String leonProfile = 'assets/leon_profile.jpg';
+const String airesProfile = 'assets/aires_profile.jpg';
+const String sandraProfile = 'assets/sandra_profile.jpg';
+const String shandoProfile = 'assets/shando_profile.jpg';
+const String savioProfile = 'assets/savio_profile.jpg';
 const String dibinProfile = 'assets/placeholder_profile.png';
 
 // TODO: place it in translation folder
