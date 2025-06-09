@@ -40,7 +40,7 @@ class _FooterItemState extends State<FooterItem> {
 
   void _launchURL(Uri url) async {
     if (await canLaunchUrl(url)) {
-      await launchUrl(url, mode: LaunchMode.platformDefault);
+      await launchUrl(url, mode: LaunchMode.externalApplication);
     } else {
       throw 'Could not launch $url';
     }
