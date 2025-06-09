@@ -36,7 +36,11 @@ flutter:
     - assets/team.png
     - assets/community.png
     - assets/orange-sky.jpg
-    - assets/placeholder_profile.png
+    - assets/sandra_profile.jpg
+    - assets/aires_profile.jpg
+    - assets/shando_profile.jpg
+    - assets/savio_profile.jpg
+    - assets/leon_profile.jpg
     - assets/aires_sandra.jpg
 
   fonts:

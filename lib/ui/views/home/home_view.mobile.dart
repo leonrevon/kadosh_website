@@ -15,7 +15,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
 }
 
 class _HomePageMobileContent extends StatelessWidget {
-  const _HomePageMobileContent({super.key});
+  const _HomePageMobileContent();
 
   @override
   Widget build(BuildContext context) {

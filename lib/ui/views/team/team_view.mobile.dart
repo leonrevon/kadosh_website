@@ -4,6 +4,7 @@ import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
+import 'package:kadosh_website/ui/views/team/widgets/team_photo.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/mobile_drawer_navigation.dart';
@@ -49,11 +50,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
                   padding: const EdgeInsets.symmetric(vertical: mediumSize),
                   child: Column(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset('assets/team.jpg',
-                            width: MediaQuery.of(context).size.width * 0.9),
-                      ),
+                      const TeamPhoto(),
                       verticalSpaceMedium,
                       Text(
                         'Meet The Team',
@@ -111,13 +108,6 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
                       ),
                       verticalSpaceSmall,
                       const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        dibinProfile,
-                        dibinProfileText,
-                        isMirrored: true,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
                     ],
                   ),
                 ),

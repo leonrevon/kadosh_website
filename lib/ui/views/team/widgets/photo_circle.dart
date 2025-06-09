@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/ui_helpers.dart';
 
 class PhotoCircle extends StatelessWidget {
   final String personImage;
@@ -6,9 +7,22 @@ class PhotoCircle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 50.0,
-      backgroundImage: AssetImage(personImage),
+    final double radius = getResponsivePhotoSize(context);
+
+    return Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: Colors.white, // Add a border for better contrast
+          width: 5, // Border width
+        ),
+      ),
+      child: CircleAvatar(
+        radius: radius - 4, // Adjust radius to account for the border
+        backgroundImage: AssetImage(personImage),
+        backgroundColor:
+            Colors.grey.shade200, // Fallback color for better appearance
+      ),
     );
   }
 }

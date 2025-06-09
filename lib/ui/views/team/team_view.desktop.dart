@@ -5,6 +5,7 @@ import 'package:kadosh_website/extensions/hover_extensions.dart';
 import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
+import 'package:kadosh_website/ui/views/team/widgets/team_photo.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
@@ -61,41 +62,41 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
                   child: Column(
                     children: [
                       verticalSpaceLarge,
-                      Text(
-                        'In the beginning...',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          height: 0.9,
-                          fontSize: getResponsiveMediumFontSize(context),
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      verticalSpaceMedium,
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset('assets/aires_sandra.jpg',
-                            width: MediaQuery.of(context).size.width * 0.5),
-                      ),
-                      verticalSpaceMedium,
-                      Text(
-                        'Aires & Sandra',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          height: 0.9,
-                          fontSize: getResponsiveMediumFontSize(context),
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      verticalSpaceMedium,
-                      Text(
-                        'Some story text and explanation of kadosh~!',
-                        style: TextStyle(
-                          height: 1.0,
-                          fontSize: getResponsiveSmallFontSize(context),
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      verticalSpaceLarge,
+                      // Text(
+                      //   'In the beginning...',
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.w800,
+                      //     height: 0.9,
+                      //     fontSize: getResponsiveMediumFontSize(context),
+                      //   ),
+                      //   textAlign: TextAlign.center,
+                      // ),
+                      // verticalSpaceMedium,
+                      // ClipRRect(
+                      //   borderRadius: BorderRadius.circular(20.0),
+                      //   child: Image.asset('assets/aires_sandra.jpg',
+                      //       width: MediaQuery.of(context).size.width * 0.5),
+                      // ),
+                      // verticalSpaceMedium,
+                      // Text(
+                      //   'Aires & Sandra',
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.w800,
+                      //     height: 0.9,
+                      //     fontSize: getResponsiveMediumFontSize(context),
+                      //   ),
+                      //   textAlign: TextAlign.center,
+                      // ),
+                      // verticalSpaceMedium,
+                      // Text(
+                      //   'Some story text and explanation of kadosh~!',
+                      //   style: TextStyle(
+                      //     height: 1.0,
+                      //     fontSize: getResponsiveSmallFontSize(context),
+                      //   ),
+                      //   textAlign: TextAlign.center,
+                      // ),
+                      // verticalSpaceLarge,
                       Text(
                         'Meet The Team',
                         style: TextStyle(
@@ -106,11 +107,7 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
                         textAlign: TextAlign.center,
                       ),
                       verticalSpaceMedium,
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: Image.asset('assets/team.png',
-                            width: MediaQuery.of(context).size.width * 0.6),
-                      ),
+                      const TeamPhoto(),
                       verticalSpaceMedium,
                       verticalSpaceSmall,
                       const Divider(),
@@ -160,12 +157,6 @@ class TeamViewDesktop extends ViewModelWidget<TeamViewModel> {
                       verticalSpaceSmall,
                       const Divider(),
                       verticalSpaceSmall,
-                      ProfileWidget(
-                        dibinProfile,
-                        dibinProfileText,
-                        isMirrored: true,
-                        fontSize: getResponsiveSmallFontSize(context),
-                      ),
                     ],
                   ),
                 ),
