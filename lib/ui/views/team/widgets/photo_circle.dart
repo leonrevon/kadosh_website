@@ -14,7 +14,7 @@ class PhotoCircle extends StatelessWidget {
         shape: BoxShape.circle,
         border: Border.all(
           color: Colors.white, // Add a border for better contrast
-          width: 5, // Border width
+          width: 3, // Border width
         ),
       ),
       child: CircleAvatar(
