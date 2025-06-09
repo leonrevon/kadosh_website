@@ -70,6 +70,7 @@ double getResponsiveMassiveFontSize(BuildContext context) =>
 
 double getResponsivePhotoSize(BuildContext context) =>
     getResponsiveFontSize(context, fontSize: 70, max: 90);
+
 double getResponsiveFontSize(BuildContext context,
     {double? fontSize, double? max}) {
   max ??= 100;
