@@ -31,21 +31,12 @@ class _AboutViewMobileContent extends StatelessWidget {
           ),
           verticalSpaceMedium,
           Text(
-            'As for me and my household,'.toUpperCase(),
+            'As for me and my household, \n we shall serve the lord'
+                .toUpperCase(),
             style: TextStyle(
               fontWeight: FontWeight.normal,
-              height: 0.9,
-              fontSize: getResponsiveExtraLargeFontSize(context),
-            ),
-            textAlign: TextAlign.center,
-          ),
-          verticalSpaceMedium,
-          Text(
-            'we shall serve the Lord.'.toUpperCase(),
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              height: 0.9,
-              fontSize: getResponsiveExtraLargeFontSize(context),
+              height: 2,
+              fontSize: getResponsiveMassiveFontSize(context),
             ),
             textAlign: TextAlign.center,
           ),
@@ -64,7 +55,7 @@ class _AboutViewMobileContent extends StatelessWidget {
           Text(
             'Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say "YES" to the call of Jesus, actively transforming themselves, the Church, and society. \n\n Our mission is to create welcoming and prayerful spaces where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of the Most High God. By embracing this identity, we empower them to live holy lives and become passionate followers of Jesus. Additionally, we seek to equip and shape these young leaders, sending them forth to fulfill God\'s plan for their lives and positively impact the world around them.',
             style: TextStyle(
-              fontSize: getResponsiveLargeFontSize(context),
+              fontSize: getResponsiveMassiveFontSize(context) / 1.617,
               height: 1.7,
             ),
             textAlign: TextAlign.justify,
