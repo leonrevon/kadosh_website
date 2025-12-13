@@ -43,11 +43,10 @@ class KadoshScaffold extends StatelessWidget {
           children: [
             Opacity(
               opacity: 0.2,
-              child: Image.asset(
-                'assets/orange-sky.jpg',
-                fit: BoxFit.cover,
-                height: screenHeight(context),
+              child: Container(
+                color: Colors.deepOrangeAccent,
                 width: screenWidth(context),
+                height: screenHeight(context),
               ),
             ),
             SizedBox(
