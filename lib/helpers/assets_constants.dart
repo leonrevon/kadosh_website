@@ -7,7 +7,7 @@ const String dibinProfile = 'assets/placeholder_profile.png';
 
 // TODO: place it in translation folder
 const String airesProfileText =
-    'Aires is the husband of Sandra and a devout man of God. He is an exemplary musician and a gifted sound engineer. He leads the band with his immense love for God and desire to raise more people of faith.';
+    'Aires, husband of Sandra and a devout man of God. He is an exemplary musician and a gifted sound engineer. He leads the band with his immense love for God and desire to raise more people of faith.';
 const String sandraProfileText =
     'Sandra, is the wife of Aires and the voice that is hard to overhear both as the main singer, and the mediator of the group (believe it or not, even as a faith group, there are still squabbles among us!!). She is the backbone of the group.';
 const String shandoProfileText =
