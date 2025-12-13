@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kadosh_website/app/app.locator.dart';
-import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
 import 'package:kadosh_website/ui/views/team/widgets/team_photo.dart';
-import 'package:kadosh_website/ui/widgets/centered_view.dart';
-import 'package:kadosh_website/ui/widgets/footer.dart';
-import 'package:kadosh_website/ui/widgets/navigation_bar/mobile_drawer_navigation.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
+import '../../common/kadosh_scaffold/kadosh_scaffold_mobile_page.dart';
 import 'team_viewmodel.dart';
 
 class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
@@ -18,105 +13,79 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
 
   @override
   Widget build(BuildContext context, TeamViewModel viewModel) {
-    return Scaffold(
-      drawer: const MobileDrawer(),
-      appBar: AppBar(
-        title: GestureDetector(
-          onTap: () => locator<RouterService>().navigateToHomeView(),
-          child: Image.asset('assets/kadosh-title.png'),
-        ),
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(1),
-          child: Divider(height: 1),
-        ),
-      ),
-      body: CenteredView(
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: [
-            Opacity(
-              opacity: 0.2,
-              child: Image.asset(
-                'assets/orange-sky.jpg',
-                fit: BoxFit.cover,
-                height: screenHeight(context),
-                width: screenWidth(context),
-              ),
+    return const KadoshScaffoldMobile(bodyContent: _TeamViewMobileContent());
+  }
+}
+
+class _TeamViewMobileContent extends StatelessWidget {
+  const _TeamViewMobileContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: mediumSize),
+      child: Column(
+        children: [
+          const TeamPhoto(),
+          verticalSpaceMedium,
+          Text(
+            'Meet The Team',
+            style: TextStyle(
+              fontWeight: FontWeight.w800,
+              height: 0.9,
+              fontSize: getResponsiveExtraLargeFontSize(context),
             ),
-            SizedBox(
-              width: screenWidth(context) * 4 / 5,
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: mediumSize),
-                  child: Column(
-                    children: [
-                      const TeamPhoto(),
-                      verticalSpaceMedium,
-                      Text(
-                        'Meet The Team',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          height: 0.9,
-                          fontSize: getResponsiveExtraLargeFontSize(context),
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        airesProfile,
-                        airesProfileText,
-                        isMirrored: false,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        sandraProfile,
-                        sandraProfileText,
-                        isMirrored: true,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        shandoProfile,
-                        shandoProfileText,
-                        isMirrored: false,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        savioProfile,
-                        savioProfileText,
-                        isMirrored: true,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                      verticalSpaceSmall,
-                      ProfileWidget(
-                        leonProfile,
-                        leonProfileText,
-                        isMirrored: false,
-                        fontSize: getResponsiveMediumFontSize(context),
-                      ),
-                      verticalSpaceSmall,
-                      const Divider(),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+            textAlign: TextAlign.center,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+          verticalSpaceSmall,
+          ProfileWidget(
+            airesProfile,
+            airesProfileText,
+            isMirrored: false,
+            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+          verticalSpaceSmall,
+          ProfileWidget(
+            sandraProfile,
+            sandraProfileText,
+            isMirrored: true,
+            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+          verticalSpaceSmall,
+          ProfileWidget(
+            shandoProfile,
+            shandoProfileText,
+            isMirrored: false,
+            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+          verticalSpaceSmall,
+          ProfileWidget(
+            savioProfile,
+            savioProfileText,
+            isMirrored: true,
+            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+          verticalSpaceSmall,
+          ProfileWidget(
+            leonProfile,
+            leonProfileText,
+            isMirrored: false,
+            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+          ),
+          verticalSpaceSmall,
+          const Divider(),
+        ],
       ),
-      bottomNavigationBar: const Footer(),
     );
   }
 }

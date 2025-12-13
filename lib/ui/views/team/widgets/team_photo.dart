@@ -18,7 +18,7 @@ class TeamPhoto extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
         child: Image.asset(
           'assets/team.jpg',
-          width: MediaQuery.of(context).size.width * 0.6,
+          width: MediaQuery.of(context).size.width * 0.9,
         ),
       ),
     );

@@ -22,7 +22,7 @@ class ProfileWidget extends StatelessWidget {
                     fontSize: fontSize,
                     height: 1.7,
                   ),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.left,
                 ),
               )
             : PhotoCircle(nameProfile),
@@ -36,7 +36,7 @@ class ProfileWidget extends StatelessWidget {
                     fontSize: fontSize,
                     height: 1.7,
                   ),
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.right,
                 ),
               ),
       ],

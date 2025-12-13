@@ -9,6 +9,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 class KadoshScaffoldMobile extends StatelessWidget {
   const KadoshScaffoldMobile({super.key, required this.bodyContent});
+
   final Widget bodyContent;
 
   @override
@@ -31,11 +32,10 @@ class KadoshScaffoldMobile extends StatelessWidget {
           children: [
             Opacity(
               opacity: 0.2,
-              child: Image.asset(
-                'assets/orange-sky.jpg',
-                fit: BoxFit.cover,
-                height: screenHeight(context),
+              child: Container(
+                color: Colors.deepOrangeAccent,
                 width: screenWidth(context),
+                height: screenHeight(context),
               ),
             ),
             SizedBox(
