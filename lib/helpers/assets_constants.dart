@@ -17,4 +17,4 @@ const String savioProfileText =
 const String dibinProfileText =
     'Dibin is one of our drummers. He started off playing the cajon and discovered his passion for playing drums. Dibin currently lives in Dresden with his wife, Teena and travels across to Hamburg whenever there is an opportunity to worship God through his beats.';
 const String leonProfileText =
-    'Leon, is our guitar player, husband of Angeline and father of Gabriel and Markus. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.';
+    'Leon, is our guitar player, husband of Angeline and father of 3. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.';
