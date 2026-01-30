@@ -11,8 +11,8 @@ class ScaleOnHover extends StatefulWidget {
 }
 
 class _ScaleOnHoverState extends State<ScaleOnHover> {
-  final scaleTransform = Matrix4.identity()..scale(1.1);
-  final noScaleTransform = Matrix4.identity()..scale(1.0);
+  final scaleTransform = Matrix4.diagonal3Values(1.1, 1.1, 1.0);
+  final noScaleTransform = Matrix4.diagonal3Values(1.0, 1.0, 1.0);
 
   bool _hovering = false;
 
