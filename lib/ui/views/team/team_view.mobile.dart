@@ -18,7 +18,7 @@ class TeamViewMobile extends ViewModelWidget<TeamViewModel> {
 }
 
 class _TeamViewMobileContent extends StatelessWidget {
-  const _TeamViewMobileContent({super.key});
+  const _TeamViewMobileContent();
 
   @override
   Widget build(BuildContext context) {

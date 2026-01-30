@@ -18,7 +18,7 @@ class TeamViewTablet extends ViewModelWidget<TeamViewModel> {
 }
 
 class _TeamViewBodyContent extends StatelessWidget {
-  const _TeamViewBodyContent({super.key});
+  const _TeamViewBodyContent();
 
   @override
   Widget build(BuildContext context) {
