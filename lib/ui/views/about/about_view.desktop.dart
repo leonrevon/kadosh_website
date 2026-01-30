@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
@@ -21,6 +22,8 @@ class _AboutViewContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Column(
       children: [
         Image.asset(
@@ -29,7 +32,7 @@ class _AboutViewContent extends StatelessWidget {
         ),
         verticalSpaceLarge,
         Text(
-          'As for me and my household,'.toUpperCase(),
+          l10n.aboutVersePart1.toUpperCase(),
           style: TextStyle(
             fontWeight: FontWeight.normal,
             height: 0.9,
@@ -39,7 +42,7 @@ class _AboutViewContent extends StatelessWidget {
         ),
         verticalSpaceMedium,
         Text(
-          'we shall serve the Lord.'.toUpperCase(),
+          l10n.aboutVersePart2.toUpperCase(),
           style: TextStyle(
             fontWeight: FontWeight.normal,
             height: 0.9,
@@ -49,7 +52,7 @@ class _AboutViewContent extends StatelessWidget {
         ),
         verticalSpaceMedium,
         Text(
-          '(Joshua 24:15)',
+          l10n.aboutVerseReference,
           style: TextStyle(
             fontWeight: FontWeight.normal,
             fontStyle: FontStyle.italic,
@@ -60,7 +63,7 @@ class _AboutViewContent extends StatelessWidget {
         ),
         verticalSpaceLarge,
         Text(
-          'Welcome to Kadosh. We are a dedicated Catholic spiritual community serving within the Archdiocese of Hamburg.               ',
+          l10n.aboutWelcome,
           style: TextStyle(
             fontSize: getResponsiveMediumFontSize(context) / 1.617,
             height: 1.7,
@@ -69,7 +72,7 @@ class _AboutViewContent extends StatelessWidget {
         ),
         verticalSpaceLarge,
         Text(
-          'Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say "YES" to the call of Jesus, actively transforming themselves, the Church, and society. \n\n Our mission is to create welcoming and safe spaces where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of the Most High God. By embracing this identity, we empower them to live holy lives and become passionate followers of Jesus. Additionally, we seek to equip and shape these young leaders, sending them forth to fulfill God\'s plan for their lives and positively impact the world around them.',
+          l10n.aboutVisionMission,
           style: TextStyle(
             fontSize: getResponsiveMediumFontSize(context) / 1.617,
             height: 1.7,

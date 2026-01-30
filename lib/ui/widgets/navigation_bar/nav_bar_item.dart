@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked_services/stacked_services.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
+
+enum NavRoute { home, about, team, events }
 
 class NavBarItem extends StatelessWidget {
-  final String title;
+  final NavRoute route;
   final bool isMobile;
-  const NavBarItem(this.title, {super.key, this.isMobile = false});
+  const NavBarItem(this.route, {super.key, this.isMobile = false});
 
   @override
   Widget build(BuildContext context) {
     final routerService = locator<RouterService>();
+    final l10n = AppLocalizations.of(context)!;
+
     return GestureDetector(
-      onTap: () => _navigateTo(title, routerService: routerService),
+      onTap: () => _navigateTo(route, routerService: routerService),
       child: Text(
-        title,
+        _getLabel(l10n),
         style: TextStyle(
           fontSize: isMobile
               ? getResponsiveLargeFontSize(context)
@@ -27,18 +31,29 @@ class NavBarItem extends StatelessWidget {
     ).moveOnHover(y: -5.0).scaleOnHover(scale: 1.2);
   }
 
-  _navigateTo(String title, {required RouterService routerService}) {
-    switch (title) {
-      case 'Home':
+  String _getLabel(AppLocalizations l10n) {
+    switch (route) {
+      case NavRoute.home:
+        return l10n.navHome;
+      case NavRoute.about:
+        return l10n.navAbout;
+      case NavRoute.team:
+        return l10n.navTeam;
+      case NavRoute.events:
+        return l10n.navEvents;
+    }
+  }
+
+  _navigateTo(NavRoute route, {required RouterService routerService}) {
+    switch (route) {
+      case NavRoute.home:
         routerService.navigateToHomeView();
-      case 'About':
+      case NavRoute.about:
         routerService.navigateToAboutView();
-      case 'Team':
+      case NavRoute.team:
         routerService.navigateToTeamView();
-      case 'Events':
+      case NavRoute.events:
         routerService.navigateToEventsView();
-      default:
-        routerService.navigateToStartupView();
     }
   }
 }

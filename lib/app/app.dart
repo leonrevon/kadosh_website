@@ -8,6 +8,7 @@ import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:kadosh_website/ui/views/team/team_view.dart';
 import 'package:kadosh_website/ui/views/events/events_view.dart';
+import 'package:kadosh_website/services/locale_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -28,6 +29,7 @@ import 'package:kadosh_website/ui/views/events/events_view.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: RouterService),
+    LazySingleton(classType: LocaleService),
     // @stacked-service
   ],
   bottomsheets: [

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
@@ -19,6 +20,8 @@ class _HomePageTabletContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -42,7 +45,7 @@ class _HomePageTabletContent extends StatelessWidget {
                 ),
                 verticalSpaceMedium,
                 Text(
-                  'MAKE DISCIPLES OF ALL NATIONS',
+                  l10n.homeTagline,
                   style: TextStyle(
                     fontWeight: FontWeight.w800,
                     height: 0.9,
@@ -52,7 +55,7 @@ class _HomePageTabletContent extends StatelessWidget {
                 ),
                 verticalSpaceMedium,
                 Text(
-                  'A group of friends, different origins, one destination - Kadosh.',
+                  l10n.homeSubtitle,
                   style: TextStyle(
                     fontSize: getResponsiveLargeFontSize(context),
                     height: 1.7,

@@ -6,6 +6,7 @@ import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
+import 'package:kadosh_website/ui/widgets/navigation_bar/language_switcher.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 class KadoshScaffold extends StatelessWidget {
@@ -22,13 +23,15 @@ class KadoshScaffold extends StatelessWidget {
           child: Image.asset('assets/kadosh-title.png'),
         ).moveOnHover(y: -5),
         actions: const [
-          NavBarItem('Home'),
+          NavBarItem(NavRoute.home),
           horizontalSpaceLarge,
-          NavBarItem('About'),
+          NavBarItem(NavRoute.about),
           horizontalSpaceLarge,
-          NavBarItem('Team'),
+          NavBarItem(NavRoute.team),
           horizontalSpaceLarge,
-          NavBarItem('Events'),
+          NavBarItem(NavRoute.events),
+          horizontalSpaceLarge,
+          LanguageSwitcher(),
           horizontalSpaceMedium,
         ],
         automaticallyImplyLeading: false,

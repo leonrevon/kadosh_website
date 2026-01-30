@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/navigation_bar/nav_bar_item.dart';
+import 'package:kadosh_website/ui/widgets/navigation_bar/language_switcher.dart';
 
 class MobileDrawer extends StatelessWidget {
   const MobileDrawer({super.key});
@@ -20,13 +21,15 @@ class MobileDrawer extends StatelessWidget {
               children: [],
             ),
           ),
-          ListTile(title: NavBarItem('Home', isMobile: true)),
+          ListTile(title: NavBarItem(NavRoute.home, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem('About', isMobile: true)),
+          ListTile(title: NavBarItem(NavRoute.about, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem('Team', isMobile: true)),
+          ListTile(title: NavBarItem(NavRoute.team, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem('Events', isMobile: true)),
+          ListTile(title: NavBarItem(NavRoute.events, isMobile: true)),
+          verticalSpaceMedium,
+          ListTile(title: LanguageSwitcher(isMobile: true)),
         ],
       ),
     );
