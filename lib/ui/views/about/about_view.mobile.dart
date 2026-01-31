@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_mobile_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked/stacked.dart';
@@ -21,6 +22,8 @@ class _AboutViewMobileContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: largeSize),
       child: Column(
@@ -31,8 +34,7 @@ class _AboutViewMobileContent extends StatelessWidget {
           ),
           verticalSpaceMedium,
           Text(
-            'As for me and my household, \n we shall serve the lord'
-                .toUpperCase(),
+            l10n.aboutVerseMobile.toUpperCase(),
             style: TextStyle(
               fontWeight: FontWeight.normal,
               height: 2,
@@ -42,7 +44,7 @@ class _AboutViewMobileContent extends StatelessWidget {
           ),
           verticalSpaceMedium,
           Text(
-            '(Joshua 24:15)',
+            l10n.aboutVerseReference,
             style: TextStyle(
               fontWeight: FontWeight.normal,
               fontStyle: FontStyle.italic,
@@ -53,7 +55,7 @@ class _AboutViewMobileContent extends StatelessWidget {
           ),
           verticalSpaceLarge,
           Text(
-            'Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say "YES" to the call of Jesus, actively transforming themselves, the Church, and society. \n\n Our mission is to create welcoming and prayerful spaces where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of the Most High God. By embracing this identity, we empower them to live holy lives and become passionate followers of Jesus. Additionally, we seek to equip and shape these young leaders, sending them forth to fulfill God\'s plan for their lives and positively impact the world around them.',
+            l10n.aboutVisionMissionMobile,
             style: TextStyle(
               fontSize: getResponsiveMassiveFontSize(context) / 1.617,
               height: 1.7,

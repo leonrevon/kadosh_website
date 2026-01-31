@@ -1,0 +1,83 @@
+{
+  "@@locale": "en",
+
+  "navHome": "Home",
+  "@navHome": {
+    "description": "Navigation label for Home"
+  },
+  "navAbout": "About",
+  "@navAbout": {
+    "description": "Navigation label for About"
+  },
+  "navTeam": "Team",
+  "@navTeam": {
+    "description": "Navigation label for Team"
+  },
+  "navEvents": "Events",
+  "@navEvents": {
+    "description": "Navigation label for Events"
+  },
+
+  "homeTagline": "MAKE DISCIPLES OF ALL NATIONS",
+  "@homeTagline": {
+    "description": "Main tagline on home page"
+  },
+  "homeSubtitle": "A group of friends, different origins, one destination. \n Kadosh",
+  "@homeSubtitle": {
+    "description": "Subtitle on home page"
+  },
+
+  "aboutVersePart1": "As for me and my household,",
+  "@aboutVersePart1": {
+    "description": "First part of Bible verse"
+  },
+  "aboutVersePart2": "we shall serve the Lord.",
+  "@aboutVersePart2": {
+    "description": "Second part of Bible verse"
+  },
+  "aboutVerseMobile": "As for me and my household, \n we shall serve the lord",
+  "@aboutVerseMobile": {
+    "description": "Bible verse for mobile view"
+  },
+  "aboutVerseReference": "(Joshua 24:15)",
+  "@aboutVerseReference": {
+    "description": "Bible verse reference"
+  },
+  "aboutWelcome": "Welcome to Kadosh. We are a dedicated Catholic spiritual community serving within the Archdiocese of Hamburg.",
+  "@aboutWelcome": {
+    "description": "Welcome message on about page"
+  },
+  "aboutVisionMission": "Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus. \n\n Our mission is to create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God. ",
+  "@aboutVisionMission": {
+    "description": "Vision and mission statement for desktop"
+  },
+  "aboutVisionMissionMobile": "Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.\n\n Our mission is to create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God. ",
+  "@aboutVisionMissionMobile": {
+    "description": "Vision and mission statement for mobile"
+  },
+
+  "teamTitle": "Meet The Team",
+  "@teamTitle": {
+    "description": "Team page title"
+  },
+  "airesProfileText": "Aires, husband of Sandra and a devout man of God. He is an exemplary musician and a gifted sound engineer. He leads the band with his immense love for God and desire to raise more people of faith.",
+  "@airesProfileText": {
+    "description": "Aires profile description"
+  },
+  "sandraProfileText": "Sandra, is the wife of Aires and the voice that is hard to overhear both as the main singer, and the mediator of the group (believe it or not, even as a faith group, there are still squabbles among us!!). She is the backbone of the group.",
+  "@sandraProfileText": {
+    "description": "Sandra profile description"
+  },
+  "shandoProfileText": "Shando, one of the first musicians to join, plays the keyboard. He is the husband of Amrita and father to Luca. He is blessed with a rich voice and a worshipping heart.",
+  "@shandoProfileText": {
+    "description": "Shando profile description"
+  },
+  "savioProfileText": "Savio, husband of Alicia and father of Joseph is our bassist. Having experienced God's grace in his life, he is excited about what the future holds in store as he continues to worship the Lord.",
+  "@savioProfileText": {
+    "description": "Savio profile description"
+  },
+  "leonProfileText": "Leon, is our guitar player, husband of Angeline and father of 3. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.",
+  "@leonProfileText": {
+    "description": "Leon profile description"
+  }
+}

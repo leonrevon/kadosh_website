@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
 import 'package:kadosh_website/helpers/assets_constants.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
@@ -22,6 +23,8 @@ class _TeamViewBodyContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: mediumSize),
       child: Column(
@@ -29,7 +32,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           const TeamPhoto(),
           verticalSpaceMedium,
           Text(
-            'Meet The Team',
+            l10n.teamTitle,
             style: TextStyle(
               fontWeight: FontWeight.w800,
               height: 0.9,
@@ -42,7 +45,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           verticalSpaceSmall,
           ProfileWidget(
             airesProfile,
-            airesProfileText,
+            l10n.airesProfileText,
             isMirrored: false,
             fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
           ),
@@ -51,7 +54,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           verticalSpaceSmall,
           ProfileWidget(
             sandraProfile,
-            sandraProfileText,
+            l10n.sandraProfileText,
             isMirrored: true,
             fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
           ),
@@ -60,7 +63,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           verticalSpaceSmall,
           ProfileWidget(
             shandoProfile,
-            shandoProfileText,
+            l10n.shandoProfileText,
             isMirrored: false,
             fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
           ),
@@ -69,7 +72,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           verticalSpaceSmall,
           ProfileWidget(
             savioProfile,
-            savioProfileText,
+            l10n.savioProfileText,
             isMirrored: true,
             fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
           ),
@@ -78,7 +81,7 @@ class _TeamViewBodyContent extends StatelessWidget {
           verticalSpaceSmall,
           ProfileWidget(
             leonProfile,
-            leonProfileText,
+            l10n.leonProfileText,
             isMirrored: false,
             fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
           ),
