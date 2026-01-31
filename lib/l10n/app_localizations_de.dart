@@ -21,11 +21,11 @@ class AppLocalizationsDe extends AppLocalizations {
   String get navEvents => 'Veranstaltungen';
 
   @override
-  String get homeTagline => 'MACHT ALLE VOLKER ZU JUNGERN';
+  String get homeTagline => 'MACHT ALLE VÖLKER ZU JUNGERN';
 
   @override
   String get homeSubtitle =>
-      'Eine Gruppe von Freunden, verschiedene Herkunfte, ein Ziel - Kadosh.';
+      'Eine Gruppe von Freunden, verschiedene Herkunfte, ein Ziel. \n Kadosh';
 
   @override
   String get aboutVersePart1 => 'Ich aber und mein Haus,';
@@ -46,11 +46,11 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get aboutVisionMission =>
-      'Unsere Vision ist es, Jesus zu einer lebendigen Prasenz im Leben der Menschen zu machen, die zu einer glaubenserfullten und lebendigen Kirche fuhrt. Wir traumen davon, eine Generation freudiger Junger zu erleben, die von ganzem Herzen \"JA\" zum Ruf Jesu sagen und sich selbst, die Kirche und die Gesellschaft aktiv verandern. \n\n Unsere Mission ist es, einladende und sichere Raume zu schaffen, in denen Menschen Gott begegnen und ihre Beziehung zu Ihm vertiefen konnen. Wir sind bestrebt, junge Erwachsene und Familien zu fordern und zu begleiten und ihnen zu helfen, ihre wahre Identitat als geliebte Kinder des Allerhochsten Gottes zu entdecken. Indem sie diese Identitat annehmen, befahigen wir sie, ein heiliges Leben zu fuhren und leidenschaftliche Nachfolger Jesu zu werden. Daruber hinaus versuchen wir, diese jungen Leiter auszurusten und zu formen und sie auszusenden, um Gottes Plan fur ihr Leben zu erfullen und die Welt um sie herum positiv zu beeinflussen.';
+      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
 
   @override
   String get aboutVisionMissionMobile =>
-      'Unsere Vision ist es, Jesus zu einer lebendigen Prasenz im Leben der Menschen zu machen, die zu einer glaubenserfullten und lebendigen Kirche fuhrt. Wir traumen davon, eine Generation freudiger Junger zu erleben, die von ganzem Herzen \"JA\" zum Ruf Jesu sagen und sich selbst, die Kirche und die Gesellschaft aktiv verandern. \n\n Unsere Mission ist es, einladende und gebetserfullte Raume zu schaffen, in denen Menschen Gott begegnen und ihre Beziehung zu Ihm vertiefen konnen. Wir sind bestrebt, junge Erwachsene und Familien zu fordern und zu begleiten und ihnen zu helfen, ihre wahre Identitat als geliebte Kinder des Allerhochsten Gottes zu entdecken. Indem sie diese Identitat annehmen, befahigen wir sie, ein heiliges Leben zu fuhren und leidenschaftliche Nachfolger Jesu zu werden. Daruber hinaus versuchen wir, diese jungen Leiter auszurusten und zu formen und sie auszusenden, um Gottes Plan fur ihr Leben zu erfullen und die Welt um sie herum positiv zu beeinflussen.';
+      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
 
   @override
   String get teamTitle => 'Unser Team';
