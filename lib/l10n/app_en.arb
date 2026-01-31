@@ -26,6 +26,30 @@
   "@homeSubtitle": {
     "description": "Subtitle on home page"
   },
+  "homeAboutCard": "About Us",
+  "@homeAboutCard": {
+    "description": "About navigation card title"
+  },
+  "homeAboutCardDesc": "Learn about our vision and mission",
+  "@homeAboutCardDesc": {
+    "description": "About navigation card description"
+  },
+  "homeTeamCard": "Our Team",
+  "@homeTeamCard": {
+    "description": "Team navigation card title"
+  },
+  "homeTeamCardDesc": "Meet the people behind Kadosh",
+  "@homeTeamCardDesc": {
+    "description": "Team navigation card description"
+  },
+  "homeEventsCard": "Events",
+  "@homeEventsCard": {
+    "description": "Events navigation card title"
+  },
+  "homeEventsCardDesc": "See our upcoming gatherings",
+  "@homeEventsCardDesc": {
+    "description": "Events navigation card description"
+  },
 
   "aboutVersePart1": "As for me and my household,",
   "@aboutVersePart1": {
@@ -55,6 +79,22 @@
   "@aboutVisionMissionMobile": {
     "description": "Vision and mission statement for mobile"
   },
+  "aboutVision": "Our Vision",
+  "@aboutVision": {
+    "description": "Vision section title"
+  },
+  "aboutVisionText": "To make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.",
+  "@aboutVisionText": {
+    "description": "Vision section text"
+  },
+  "aboutMission": "Our Mission",
+  "@aboutMission": {
+    "description": "Mission section title"
+  },
+  "aboutMissionText": "To create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God.",
+  "@aboutMissionText": {
+    "description": "Mission section text"
+  },
 
   "teamTitle": "Meet The Team",
   "@teamTitle": {
@@ -79,5 +119,18 @@
   "leonProfileText": "Leon, is our guitar player, husband of Angeline and father of 3. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.",
   "@leonProfileText": {
     "description": "Leon profile description"
+  },
+
+  "eventsTitle": "Events",
+  "@eventsTitle": {
+    "description": "Events page title"
+  },
+  "eventsWorkInProgress": "This page is currently under construction. We're working on bringing you an exciting events section where you can discover our upcoming gatherings and activities.",
+  "@eventsWorkInProgress": {
+    "description": "Work in progress message"
+  },
+  "eventsComingSoon": "Stay tuned for updates!",
+  "@eventsComingSoon": {
+    "description": "Coming soon message"
   }
 }

@@ -8,19 +8,33 @@
 
   "homeTagline": "MACHT ALLE VÖLKER ZU JUNGERN",
   "homeSubtitle": "Eine Gruppe von Freunden, verschiedene Herkunfte, ein Ziel. \n Kadosh",
+  "homeAboutCard": "Über uns",
+  "homeAboutCardDesc": "Erfahren Sie mehr über unsere Vision und Mission",
+  "homeTeamCard": "Unser Team",
+  "homeTeamCardDesc": "Lernen Sie die Menschen hinter Kadosh kennen",
+  "homeEventsCard": "Veranstaltungen",
+  "homeEventsCardDesc": "Sehen Sie unsere kommenden Treffen",
 
   "aboutVersePart1": "Ich aber und mein Haus,",
   "aboutVersePart2": "wir wollen dem Herrn dienen.",
   "aboutVerseMobile": "Ich aber und mein Haus, \n wir wollen dem Herrn dienen",
   "aboutVerseReference": "(Josua 24:15)",
   "aboutWelcome": "Willkommen bei Kadosh. Wir sind eine engagierte katholische geistliche Gemeinschaft, die in der Erzdiozese Hamburg dient.",
-  "aboutVisionMission": "Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ",
-  "aboutVisionMissionMobile": "Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ",
+  "aboutVisionMission": "Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen \"Ja\" zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ",
+  "aboutVisionMissionMobile": "Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen \"Ja\" zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ",
+  "aboutVision": "Unsere Vision",
+  "aboutVisionText": "Eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen.",
+  "aboutMission": "Unsere Mission",
+  "aboutMissionText": "Eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien zu fördern und zu Jüngern zu machen, indem wir ihnen helfen, ihre wahre Identität als geliebte Kinder Gottes zu entdecken.",
 
   "teamTitle": "Unser Team",
   "airesProfileText": "Aires, Ehemann von Sandra und ein gottesfrommer Mann. Er ist ein vorbildlicher Musiker und ein begabter Tontechniker. Er leitet die Band mit seiner immensen Liebe zu Gott und dem Wunsch, mehr glaubige Menschen heranzuziehen.",
   "sandraProfileText": "Sandra ist die Ehefrau von Aires und die Stimme, die man sowohl als Leadsangerin als auch als Vermittlerin der Gruppe nicht uberhoren kann (ob Sie es glauben oder nicht, selbst als Glaubensgruppe gibt es bei uns noch Streitigkeiten!!). Sie ist das Ruckgrat der Gruppe.",
   "shandoProfileText": "Shando, einer der ersten Musiker, der sich anschloss, spielt Keyboard. Er ist der Ehemann von Amrita und Vater von Luca. Er ist mit einer kraftigen Stimme und einem anbetenden Herzen gesegnet.",
   "savioProfileText": "Savio, Ehemann von Alicia und Vater von Joseph, ist unser Bassist. Nachdem er Gottes Gnade in seinem Leben erfahren hat, ist er gespannt, was die Zukunft bereithalt, wahrend er den Herrn weiter anbetet.",
-  "leonProfileText": "Leon ist unser Gitarrist, Ehemann von Angeline und Vater von 3 Kindern. Vom Heavy-Metal-Gitarristen zum grossartigen Lobpreiser. Seine Leidenschaft fur Gott, Familie und coole Riffs ist nicht zu ubersehen."
+  "leonProfileText": "Leon ist unser Gitarrist, Ehemann von Angeline und Vater von 3 Kindern. Vom Heavy-Metal-Gitarristen zum grossartigen Lobpreiser. Seine Leidenschaft fur Gott, Familie und coole Riffs ist nicht zu ubersehen.",
+
+  "eventsTitle": "Veranstaltungen",
+  "eventsWorkInProgress": "Diese Seite befindet sich derzeit im Aufbau. Wir arbeiten daran, Ihnen einen spannenden Veranstaltungsbereich zu bieten, in dem Sie unsere kommenden Treffen und Aktivitäten entdecken können.",
+  "eventsComingSoon": "Bleiben Sie dran für Updates!"
 }

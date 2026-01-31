@@ -134,6 +134,42 @@ abstract class AppLocalizations {
   /// **'A group of friends, different origins, one destination. \n Kadosh'**
   String get homeSubtitle;
 
+  /// About navigation card title
+  ///
+  /// In en, this message translates to:
+  /// **'About Us'**
+  String get homeAboutCard;
+
+  /// About navigation card description
+  ///
+  /// In en, this message translates to:
+  /// **'Learn about our vision and mission'**
+  String get homeAboutCardDesc;
+
+  /// Team navigation card title
+  ///
+  /// In en, this message translates to:
+  /// **'Our Team'**
+  String get homeTeamCard;
+
+  /// Team navigation card description
+  ///
+  /// In en, this message translates to:
+  /// **'Meet the people behind Kadosh'**
+  String get homeTeamCardDesc;
+
+  /// Events navigation card title
+  ///
+  /// In en, this message translates to:
+  /// **'Events'**
+  String get homeEventsCard;
+
+  /// Events navigation card description
+  ///
+  /// In en, this message translates to:
+  /// **'See our upcoming gatherings'**
+  String get homeEventsCardDesc;
+
   /// First part of Bible verse
   ///
   /// In en, this message translates to:
@@ -176,6 +212,30 @@ abstract class AppLocalizations {
   /// **'Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.\n\n Our mission is to create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God. '**
   String get aboutVisionMissionMobile;
 
+  /// Vision section title
+  ///
+  /// In en, this message translates to:
+  /// **'Our Vision'**
+  String get aboutVision;
+
+  /// Vision section text
+  ///
+  /// In en, this message translates to:
+  /// **'To make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.'**
+  String get aboutVisionText;
+
+  /// Mission section title
+  ///
+  /// In en, this message translates to:
+  /// **'Our Mission'**
+  String get aboutMission;
+
+  /// Mission section text
+  ///
+  /// In en, this message translates to:
+  /// **'To create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God.'**
+  String get aboutMissionText;
+
   /// Team page title
   ///
   /// In en, this message translates to:
@@ -211,6 +271,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Leon, is our guitar player, husband of Angeline and father of 3. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.'**
   String get leonProfileText;
+
+  /// Events page title
+  ///
+  /// In en, this message translates to:
+  /// **'Events'**
+  String get eventsTitle;
+
+  /// Work in progress message
+  ///
+  /// In en, this message translates to:
+  /// **'This page is currently under construction. We\'re working on bringing you an exciting events section where you can discover our upcoming gatherings and activities.'**
+  String get eventsWorkInProgress;
+
+  /// Coming soon message
+  ///
+  /// In en, this message translates to:
+  /// **'Stay tuned for updates!'**
+  String get eventsComingSoon;
 }
 
 class _AppLocalizationsDelegate

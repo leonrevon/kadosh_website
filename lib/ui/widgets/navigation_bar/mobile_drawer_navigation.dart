@@ -10,26 +10,25 @@ class MobileDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: kcCardBackground,
       child: ListView(
-        children: const [
+        children: [
           DrawerHeader(
-            decoration: BoxDecoration(
-                color: kcPrimaryColor,
+            decoration: const BoxDecoration(
+                color: kcPrimaryBackground,
                 image: DecorationImage(
                     image: AssetImage('assets/kadosh-title.png'))),
-            child: Column(
-              children: [],
-            ),
+            child: Container(),
           ),
-          ListTile(title: NavBarItem(NavRoute.home, isMobile: true)),
+          const ListTile(title: NavBarItem(NavRoute.home, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem(NavRoute.about, isMobile: true)),
+          const ListTile(title: NavBarItem(NavRoute.about, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem(NavRoute.team, isMobile: true)),
+          const ListTile(title: NavBarItem(NavRoute.team, isMobile: true)),
           verticalSpaceSmall,
-          ListTile(title: NavBarItem(NavRoute.events, isMobile: true)),
+          const ListTile(title: NavBarItem(NavRoute.events, isMobile: true)),
           verticalSpaceMedium,
-          ListTile(title: LanguageSwitcher(isMobile: true)),
+          const ListTile(title: LanguageSwitcher(isMobile: true)),
         ],
       ),
     );

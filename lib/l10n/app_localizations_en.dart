@@ -28,6 +28,24 @@ class AppLocalizationsEn extends AppLocalizations {
       'A group of friends, different origins, one destination. \n Kadosh';
 
   @override
+  String get homeAboutCard => 'About Us';
+
+  @override
+  String get homeAboutCardDesc => 'Learn about our vision and mission';
+
+  @override
+  String get homeTeamCard => 'Our Team';
+
+  @override
+  String get homeTeamCardDesc => 'Meet the people behind Kadosh';
+
+  @override
+  String get homeEventsCard => 'Events';
+
+  @override
+  String get homeEventsCardDesc => 'See our upcoming gatherings';
+
+  @override
   String get aboutVersePart1 => 'As for me and my household,';
 
   @override
@@ -53,6 +71,20 @@ class AppLocalizationsEn extends AppLocalizations {
       'Our vision is to make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.\n\n Our mission is to create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God. ';
 
   @override
+  String get aboutVision => 'Our Vision';
+
+  @override
+  String get aboutVisionText =>
+      'To make Jesus a living presence in the lives of individuals, leading to a faith-filled and vibrant Church. We dream of witnessing a generation of joyful disciples who wholeheartedly say \"YES\" to the call of Jesus.';
+
+  @override
+  String get aboutMission => 'Our Mission';
+
+  @override
+  String get aboutMissionText =>
+      'To create a welcoming atmosphere where people can encounter God and deepen their relationship with Him. We are committed to nurturing and discipling young adults and families, helping them discover their true identity as beloved children of God.';
+
+  @override
   String get teamTitle => 'Meet The Team';
 
   @override
@@ -74,4 +106,14 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get leonProfileText =>
       'Leon, is our guitar player, husband of Angeline and father of 3. From heavy metal guitarist to awesome worship. His passion for God, family and cool riffs are hard to miss.';
+
+  @override
+  String get eventsTitle => 'Events';
+
+  @override
+  String get eventsWorkInProgress =>
+      'This page is currently under construction. We\'re working on bringing you an exciting events section where you can discover our upcoming gatherings and activities.';
+
+  @override
+  String get eventsComingSoon => 'Stay tuned for updates!';
 }

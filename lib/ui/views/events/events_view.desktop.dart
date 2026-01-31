@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/l10n/app_localizations.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/widgets/content_card.dart';
 import 'package:stacked/stacked.dart';
 
 import 'events_viewmodel.dart';
@@ -10,18 +13,65 @@ class EventsViewDesktop extends ViewModelWidget<EventsViewModel> {
 
   @override
   Widget build(BuildContext context, EventsViewModel viewModel) {
+    final l10n = AppLocalizations.of(context)!;
+
     return KadoshScaffold(
       bodyContent: Center(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: mediumSize),
-              child: Image.asset(
-                'assets/first_friday_poster/december.png',
-                height: getResponsiveHorizontalSpaceLarge(context),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: largeSize),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ContentCard(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(mediumSize),
+                      decoration: BoxDecoration(
+                        color: kcSecondaryAccent.withOpacity(0.2),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.construction_outlined,
+                        size: 64,
+                        color: kcPrimaryAccent,
+                      ),
+                    ),
+                    verticalSpaceMedium,
+                    Text(
+                      l10n.eventsTitle,
+                      style: TextStyle(
+                        fontSize: getResponsiveMediumFontSize(context),
+                        fontWeight: FontWeight.w700,
+                        color: kcTextPrimary,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    verticalSpaceMedium,
+                    Text(
+                      l10n.eventsWorkInProgress,
+                      style: TextStyle(
+                        fontSize: getResponsiveSmallFontSize(context),
+                        color: kcTextSecondary,
+                        height: 1.6,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    verticalSpaceMedium,
+                    Text(
+                      l10n.eventsComingSoon,
+                      style: TextStyle(
+                        fontSize: getResponsiveSmallFontSize(context),
+                        fontStyle: FontStyle.italic,
+                        color: kcPrimaryAccent,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

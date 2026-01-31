@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:kadosh_website/l10n/app_localizations.dart';
@@ -26,6 +27,8 @@ class NavBarItem extends StatelessWidget {
           fontSize: isMobile
               ? getResponsiveLargeFontSize(context)
               : getResponsiveSmallFontSize(context),
+          color: kcTextPrimary,
+          fontWeight: FontWeight.w500,
         ),
       ),
     ).moveOnHover(y: -5.0).scaleOnHover(scale: 1.2);

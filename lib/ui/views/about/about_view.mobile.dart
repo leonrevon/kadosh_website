@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/l10n/app_localizations.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_mobile_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/widgets/content_card.dart';
 import 'package:stacked/stacked.dart';
 
 import 'about_viewmodel.dart';
@@ -25,52 +27,91 @@ class _AboutViewMobileContent extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: largeSize),
+      padding: const EdgeInsets.symmetric(vertical: mediumSize),
       child: Column(
         children: [
-          Image.asset(
-            'assets/community.png',
-            height: getResponsiveHorizontalSpaceMedium(context),
+          // Bible Verse Card
+          ContentCard(
+            child: Column(
+              children: [
+                Icon(
+                  Icons.format_quote,
+                  size: 32,
+                  color: kcPrimaryAccent.withOpacity(0.6),
+                ),
+                verticalSpaceSmall,
+                Text(
+                  l10n.aboutVerseMobile.toUpperCase(),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.italic,
+                    height: 1.8,
+                    fontSize: getResponsiveMassiveFontSize(context) / 1.5,
+                    color: kcTextPrimary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                verticalSpaceSmall,
+                Text(
+                  l10n.aboutVerseReference,
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    height: 0.9,
+                    fontSize: getResponsiveLargeFontSize(context) / 1.5,
+                    color: kcTextSecondary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
           verticalSpaceMedium,
-          Text(
-            l10n.aboutVerseMobile.toUpperCase(),
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              height: 2,
-              fontSize: getResponsiveMassiveFontSize(context),
+          // Welcome Card
+          ContentCard(
+            icon: Icons.waving_hand_outlined,
+            title: 'Welcome',
+            child: Text(
+              l10n.aboutWelcome,
+              style: TextStyle(
+                fontSize: getResponsiveMassiveFontSize(context) / 1.617,
+                height: 1.8,
+                color: kcTextPrimary,
+              ),
+              textAlign: TextAlign.left,
             ),
-            textAlign: TextAlign.center,
           ),
           verticalSpaceMedium,
-          Text(
-            l10n.aboutVerseReference,
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              fontStyle: FontStyle.italic,
-              height: 0.9,
-              fontSize: getResponsiveLargeFontSize(context),
+          // Vision Card
+          ContentCard(
+            icon: Icons.visibility_outlined,
+            title: l10n.aboutVision,
+            child: Text(
+              l10n.aboutVisionText,
+              style: TextStyle(
+                fontSize: getResponsiveMassiveFontSize(context) / 1.617,
+                height: 1.7,
+                color: kcTextPrimary,
+              ),
+              textAlign: TextAlign.left,
             ),
-            textAlign: TextAlign.center,
+          ),
+          verticalSpaceMedium,
+          // Mission Card
+          ContentCard(
+            icon: Icons.flag_outlined,
+            title: l10n.aboutMission,
+            child: Text(
+              l10n.aboutMissionText,
+              style: TextStyle(
+                fontSize: getResponsiveMassiveFontSize(context) / 1.617,
+                height: 1.7,
+                color: kcTextPrimary,
+              ),
+              textAlign: TextAlign.left,
+            ),
           ),
           verticalSpaceLarge,
-          Text(
-            l10n.aboutWelcome,
-            style: TextStyle(
-              fontSize: getResponsiveMassiveFontSize(context) / 1.617,
-              height: 2,
-            ),
-            textAlign: TextAlign.justify,
-          ),
-          verticalSpaceMedium,
-          Text(
-            l10n.aboutVisionMissionMobile,
-            style: TextStyle(
-              fontSize: getResponsiveMassiveFontSize(context) / 1.617,
-              height: 1.7,
-            ),
-            textAlign: TextAlign.justify,
-          ),
         ],
       ),
     );
