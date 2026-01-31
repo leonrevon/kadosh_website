@@ -39,7 +39,7 @@ class _AboutViewTabletContent extends StatelessWidget {
                 Icon(
                   Icons.format_quote,
                   size: 36,
-                  color: kcPrimaryAccent.withOpacity(0.6),
+                  color: kcPrimaryAccent.withValues(alpha: 0.6),
                 ),
                 verticalSpaceMedium,
                 Text(

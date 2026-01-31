@@ -27,13 +27,13 @@ class ContentCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
         ],
         border: Border.all(
-          color: kcBorderColor.withOpacity(0.5),
+          color: kcBorderColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),

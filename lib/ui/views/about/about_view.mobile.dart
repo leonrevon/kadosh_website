@@ -37,7 +37,7 @@ class _AboutViewMobileContent extends StatelessWidget {
                 Icon(
                   Icons.format_quote,
                   size: 32,
-                  color: kcPrimaryAccent.withOpacity(0.6),
+                  color: kcPrimaryAccent.withValues(alpha: 0.6),
                 ),
                 verticalSpaceSmall,
                 Text(
