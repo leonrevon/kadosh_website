@@ -28,7 +28,7 @@ class EventsViewDesktop extends ViewModelWidget<EventsViewModel> {
                     Container(
                       padding: const EdgeInsets.all(mediumSize),
                       decoration: BoxDecoration(
-                        color: kcSecondaryAccent.withOpacity(0.2),
+                        color: kcSecondaryAccent.withValues(alpha: 0.2),
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(

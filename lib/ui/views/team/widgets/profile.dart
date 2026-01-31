@@ -28,13 +28,13 @@ class ProfileWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
         ],
         border: Border.all(
-          color: kcBorderColor.withOpacity(0.5),
+          color: kcBorderColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -46,12 +46,12 @@ class ProfileWidget extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: kcPrimaryAccent.withOpacity(0.3),
+                color: kcPrimaryAccent.withValues(alpha: 0.3),
                 width: 3,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: kcPrimaryAccent.withOpacity(0.1),
+                  color: kcPrimaryAccent.withValues(alpha: 0.1),
                   blurRadius: 8,
                   offset: const Offset(0, 2),
                 ),
@@ -119,13 +119,13 @@ class ProfileCardCompact extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
         ],
         border: Border.all(
-          color: kcBorderColor.withOpacity(0.5),
+          color: kcBorderColor.withValues(alpha: 0.5),
           width: 1,
         ),
       ),
@@ -137,7 +137,7 @@ class ProfileCardCompact extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
-                color: kcPrimaryAccent.withOpacity(0.3),
+                color: kcPrimaryAccent.withValues(alpha: 0.3),
                 width: 3,
               ),
             ),

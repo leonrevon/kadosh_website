@@ -39,20 +39,20 @@ class _NavigationCardState extends State<NavigationCard> {
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(_isHovered ? 0.12 : 0.08),
+                color: Colors.black.withValues(alpha: _isHovered ? 0.12 : 0.08),
                 blurRadius: _isHovered ? 15 : 10,
                 offset: Offset(0, _isHovered ? 6 : 4),
               ),
             ],
             border: Border.all(
               color: _isHovered
-                  ? kcPrimaryAccent.withOpacity(0.5)
-                  : kcBorderColor.withOpacity(0.5),
+                  ? kcPrimaryAccent.withValues(alpha: 0.5)
+                  : kcBorderColor.withValues(alpha: 0.5),
               width: _isHovered ? 2 : 1,
             ),
           ),
           transform: _isHovered
-              ? (Matrix4.identity()..translate(0.0, -4.0))
+              ? Matrix4.translationValues(0.0, -4.0, 0.0)
               : Matrix4.identity(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -60,7 +60,7 @@ class _NavigationCardState extends State<NavigationCard> {
               Container(
                 padding: const EdgeInsets.all(smallSize * 1.5),
                 decoration: BoxDecoration(
-                  color: kcPrimaryAccent.withOpacity(0.1),
+                  color: kcPrimaryAccent.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(

@@ -24,7 +24,7 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="FilledStacks Academy">
+  <meta name="apple-mobile-web-app-title" content="Kadosh Hamburg">
   <link rel="apple-touch-icon" href="icons/kadosh-192.png">
 
   <!-- Favicon -->
@@ -33,22 +33,18 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
 
   <title>Kadosh Hamburg</title>
   <link rel="manifest" href="manifest.json">
 
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
-  </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 
 <body>
   <style>
-    
+
     body {
       background-color: #ffffff;
       height: 100vh;
@@ -143,17 +139,17 @@
 
     window.addEventListener('load', function (ev) {
       var loaderContent = document.querySelector('#loader-content');
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
+
+      _flutter.loader.load({
+        serviceWorkerSettings: {
+          serviceWorkerVersion: "{{flutter_service_worker_version}}"
+        },
+        onEntrypointLoaded: async function (engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine();
+          loaderContent.style.opacity = "0";
+          await delay(300);
+          await appRunner.runApp();
         }
-      }).then(function (engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(async function (appRunner) {
-        loaderContent.style.opacity = "0";
-        await delay(300);
-        await appRunner.runApp();
       });
     });
   </script>
