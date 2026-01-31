@@ -43,16 +43,18 @@ class KadoshScaffoldMobile extends StatelessWidget {
           ),
         ),
       ),
-      body: CenteredView(
-        child: Container(
-          color: kcPrimaryBackground,
-          width: screenWidth(context),
-          height: screenHeight(context),
-          child: Center(
-            child: SizedBox(
-              width: screenWidth(context) * 4 / 5,
-              child: SingleChildScrollView(
-                child: bodyContent,
+      body: SelectionArea(
+        child: CenteredView(
+          child: Container(
+            color: kcPrimaryBackground,
+            width: screenWidth(context),
+            height: screenHeight(context),
+            child: Center(
+              child: SizedBox(
+                width: screenWidth(context) * 4 / 5,
+                child: SingleChildScrollView(
+                  child: bodyContent,
+                ),
               ),
             ),
           ),
