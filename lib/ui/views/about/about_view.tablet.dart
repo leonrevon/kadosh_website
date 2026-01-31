@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/l10n/app_localizations.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/kadosh_scaffold/kadosh_scaffold_page.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
+import 'package:kadosh_website/ui/widgets/content_card.dart';
 import 'package:stacked/stacked.dart';
 
 import 'about_viewmodel.dart';
@@ -24,58 +26,104 @@ class _AboutViewTabletContent extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Column(
-          children: [
-            Image.asset(
-              'assets/community.png',
-              height: getResponsiveHorizontalSpaceMedium(context),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: largeSize),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          // Bible Verse Card
+          ContentCard(
+            child: Column(
+              children: [
+                Icon(
+                  Icons.format_quote,
+                  size: 36,
+                  color: kcPrimaryAccent.withOpacity(0.6),
+                ),
+                verticalSpaceMedium,
+                Text(
+                  l10n.aboutVerseMobile.toUpperCase(),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.italic,
+                    height: 1.8,
+                    fontSize: getResponsiveLargeFontSize(context),
+                    color: kcTextPrimary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                verticalSpaceMedium,
+                Text(
+                  l10n.aboutVerseReference,
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                    height: 0.9,
+                    fontSize: getResponsiveMediumFontSize(context) / 1.3,
+                    color: kcTextSecondary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
-            verticalSpaceMedium,
-            Text(
-              l10n.aboutVerseMobile.toUpperCase(),
-              style: TextStyle(
-                fontWeight: FontWeight.normal,
-                height: 2,
-                fontSize: getResponsiveLargeFontSize(context),
-              ),
-              textAlign: TextAlign.center,
-            ),
-            verticalSpaceMedium,
-            Text(
-              l10n.aboutVerseReference,
-              style: TextStyle(
-                fontWeight: FontWeight.normal,
-                fontStyle: FontStyle.italic,
-                height: 0.9,
-                fontSize: getResponsiveMediumFontSize(context),
-              ),
-              textAlign: TextAlign.center,
-            ),
-            verticalSpaceLarge,
-            Text(
+          ),
+          verticalSpaceMedium,
+          // Welcome Card
+          ContentCard(
+            icon: Icons.waving_hand_outlined,
+            title: 'Welcome',
+            child: Text(
               l10n.aboutWelcome,
               style: TextStyle(
                 fontSize: getResponsiveMassiveFontSize(context) / 1.617,
-                height: 2,
+                height: 1.8,
+                color: kcTextPrimary,
               ),
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.left,
             ),
-            verticalSpaceMedium,
-            Text(
-              l10n.aboutVisionMissionMobile,
-              style: TextStyle(
-                fontSize: getResponsiveLargeFontSize(context) / 1.617,
-                height: 1.7,
+          ),
+          verticalSpaceMedium,
+          // Vision and Mission in Row
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: ContentCard(
+                  icon: Icons.visibility_outlined,
+                  title: l10n.aboutVision,
+                  child: Text(
+                    l10n.aboutVisionText,
+                    style: TextStyle(
+                      fontSize: getResponsiveLargeFontSize(context) / 1.617,
+                      height: 1.7,
+                      color: kcTextPrimary,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
               ),
-              textAlign: TextAlign.justify,
-            ),
-          ],
-        ),
-      ],
+              horizontalSpaceMedium,
+              Expanded(
+                child: ContentCard(
+                  icon: Icons.flag_outlined,
+                  title: l10n.aboutMission,
+                  child: Text(
+                    l10n.aboutMissionText,
+                    style: TextStyle(
+                      fontSize: getResponsiveLargeFontSize(context) / 1.617,
+                      height: 1.7,
+                      color: kcTextPrimary,
+                    ),
+                    textAlign: TextAlign.left,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          verticalSpaceLarge,
+        ],
+      ),
     );
   }
 }

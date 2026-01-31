@@ -16,7 +16,16 @@ class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kcFooter,
+      decoration: BoxDecoration(
+        color: kcFooter,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 4,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
       padding: const EdgeInsets.only(top: smallSize, bottom: smallSize),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

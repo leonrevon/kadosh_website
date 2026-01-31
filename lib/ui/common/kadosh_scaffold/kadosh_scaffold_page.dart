@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kadosh_website/app/app.locator.dart';
 import 'package:kadosh_website/app/app.router.dart';
 import 'package:kadosh_website/extensions/hover_extensions.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/widgets/centered_view.dart';
 import 'package:kadosh_website/ui/widgets/footer.dart';
@@ -17,7 +18,10 @@ class KadoshScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kcPrimaryBackground,
       appBar: AppBar(
+        backgroundColor: kcCardBackground,
+        elevation: 0,
         title: GestureDetector(
           onTap: () => locator<RouterService>().navigateToHomeView(),
           child: Image.asset('assets/kadosh-title.png'),
@@ -35,28 +39,34 @@ class KadoshScaffold extends StatelessWidget {
           horizontalSpaceMedium,
         ],
         automaticallyImplyLeading: false,
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(1),
-          child: Divider(height: 1),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(1),
+          child: Container(
+            height: 1,
+            decoration: BoxDecoration(
+              color: kcBorderColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 4,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
       body: CenteredView(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Opacity(
-              opacity: 0.2,
-              child: Container(
-                color: Colors.deepOrangeAccent,
-                width: screenWidth(context),
-                height: screenHeight(context),
-              ),
-            ),
-            SizedBox(
+        child: Container(
+          color: kcPrimaryBackground,
+          width: screenWidth(context),
+          height: screenHeight(context),
+          child: Center(
+            child: SizedBox(
               width: screenWidth(context) * 4 / 5,
               child: SingleChildScrollView(child: bodyContent),
             ),
-          ],
+          ),
         ),
       ),
       bottomNavigationBar: const Footer(),

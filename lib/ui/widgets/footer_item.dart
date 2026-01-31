@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class FooterItem extends StatefulWidget {
@@ -50,6 +51,6 @@ class _FooterItemState extends State<FooterItem> {
 Widget _buildIcon(IconData icon, bool isHovered) {
   return Icon(
     icon,
-    color: isHovered ? Colors.amber : Colors.white,
+    color: isHovered ? kcPrimaryAccent : kcTextPrimary,
   );
 }

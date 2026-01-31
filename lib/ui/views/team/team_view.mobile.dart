@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kadosh_website/l10n/app_localizations.dart';
 import 'package:kadosh_website/helpers/assets_constants.dart';
+import 'package:kadosh_website/ui/common/app_colors.dart';
 import 'package:kadosh_website/ui/common/ui_helpers.dart';
 import 'package:kadosh_website/ui/views/team/widgets/profile.dart';
 import 'package:kadosh_website/ui/views/team/widgets/team_photo.dart';
@@ -24,6 +25,7 @@ class _TeamViewMobileContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final fontSize = getResponsiveExtraLargeFontSize(context) / 1.8;
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: mediumSize),
@@ -37,56 +39,46 @@ class _TeamViewMobileContent extends StatelessWidget {
               fontWeight: FontWeight.w800,
               height: 0.9,
               fontSize: getResponsiveExtraLargeFontSize(context),
+              color: kcTextPrimary,
             ),
             textAlign: TextAlign.center,
           ),
-          verticalSpaceSmall,
-          const Divider(),
-          verticalSpaceSmall,
+          verticalSpaceMedium,
           ProfileWidget(
             airesProfile,
             l10n.airesProfileText,
-            isMirrored: false,
-            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+            fontSize: fontSize,
+            isCompact: true,
           ),
-          verticalSpaceSmall,
-          const Divider(),
-          verticalSpaceSmall,
+          verticalSpaceMedium,
           ProfileWidget(
             sandraProfile,
             l10n.sandraProfileText,
-            isMirrored: true,
-            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+            fontSize: fontSize,
+            isCompact: true,
           ),
-          verticalSpaceSmall,
-          const Divider(),
-          verticalSpaceSmall,
+          verticalSpaceMedium,
           ProfileWidget(
             shandoProfile,
             l10n.shandoProfileText,
-            isMirrored: false,
-            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+            fontSize: fontSize,
+            isCompact: true,
           ),
-          verticalSpaceSmall,
-          const Divider(),
-          verticalSpaceSmall,
+          verticalSpaceMedium,
           ProfileWidget(
             savioProfile,
             l10n.savioProfileText,
-            isMirrored: true,
-            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+            fontSize: fontSize,
+            isCompact: true,
           ),
-          verticalSpaceSmall,
-          const Divider(),
-          verticalSpaceSmall,
+          verticalSpaceMedium,
           ProfileWidget(
             leonProfile,
             l10n.leonProfileText,
-            isMirrored: false,
-            fontSize: getResponsiveExtraLargeFontSize(context) / 1.617,
+            fontSize: fontSize,
+            isCompact: true,
           ),
-          verticalSpaceSmall,
-          const Divider(),
+          verticalSpaceLarge,
         ],
       ),
     );

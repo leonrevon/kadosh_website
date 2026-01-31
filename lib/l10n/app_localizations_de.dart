@@ -28,6 +28,25 @@ class AppLocalizationsDe extends AppLocalizations {
       'Eine Gruppe von Freunden, verschiedene Herkunfte, ein Ziel. \n Kadosh';
 
   @override
+  String get homeAboutCard => 'Über uns';
+
+  @override
+  String get homeAboutCardDesc =>
+      'Erfahren Sie mehr über unsere Vision und Mission';
+
+  @override
+  String get homeTeamCard => 'Unser Team';
+
+  @override
+  String get homeTeamCardDesc => 'Lernen Sie die Menschen hinter Kadosh kennen';
+
+  @override
+  String get homeEventsCard => 'Veranstaltungen';
+
+  @override
+  String get homeEventsCardDesc => 'Sehen Sie unsere kommenden Treffen';
+
+  @override
   String get aboutVersePart1 => 'Ich aber und mein Haus,';
 
   @override
@@ -46,11 +65,25 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get aboutVisionMission =>
-      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
+      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen \"Ja\" zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
 
   @override
   String get aboutVisionMissionMobile =>
-      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
+      'Unsere Vision ist es, eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen \"Ja\" zum Ruf Jesu sagen. \n\n Unsere Mission ist es, eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien im Glauben zu fördern und zu Jüngern zu machen, indem wir ihnen dabei helfen, ihre Identität als geliebte Kinder Gottes zu entdecken. ';
+
+  @override
+  String get aboutVision => 'Unsere Vision';
+
+  @override
+  String get aboutVisionText =>
+      'Eine glaubensstärkere und lebendigere Kirche zu erleben. Wir träumen von einer Generation freudiger Jünger, die von ganzem Herzen „Ja” zum Ruf Jesu sagen.';
+
+  @override
+  String get aboutMission => 'Unsere Mission';
+
+  @override
+  String get aboutMissionText =>
+      'Eine einladende Atmosphäre zu schaffen, in der Menschen Gott begegnen und ihre Beziehung zu ihm vertiefen können. Wir engagieren uns dafür, junge Erwachsene und Familien zu fördern und zu Jüngern zu machen, indem wir ihnen helfen, ihre wahre Identität als geliebte Kinder Gottes zu entdecken.';
 
   @override
   String get teamTitle => 'Unser Team';
@@ -74,4 +107,14 @@ class AppLocalizationsDe extends AppLocalizations {
   @override
   String get leonProfileText =>
       'Leon ist unser Gitarrist, Ehemann von Angeline und Vater von 3 Kindern. Vom Heavy-Metal-Gitarristen zum grossartigen Lobpreiser. Seine Leidenschaft fur Gott, Familie und coole Riffs ist nicht zu ubersehen.';
+
+  @override
+  String get eventsTitle => 'Veranstaltungen';
+
+  @override
+  String get eventsWorkInProgress =>
+      'Diese Seite befindet sich derzeit im Aufbau. Wir arbeiten daran, Ihnen einen spannenden Veranstaltungsbereich zu bieten, in dem Sie unsere kommenden Treffen und Aktivitäten entdecken können.';
+
+  @override
+  String get eventsComingSoon => 'Bleiben Sie dran für Updates!';
 }
