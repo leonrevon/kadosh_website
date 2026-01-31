@@ -45,61 +45,67 @@ class _TeamViewBodyContent extends StatelessWidget {
           ),
           verticalSpaceLarge,
           // Two-column grid for tablet
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: ProfileWidget(
-                  airesProfile,
-                  l10n.airesProfileText,
-                  fontSize: fontSize,
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: ProfileWidget(
+                    airesProfile,
+                    l10n.airesProfileText,
+                    fontSize: fontSize,
+                  ),
                 ),
-              ),
-              horizontalSpaceMedium,
-              Expanded(
-                child: ProfileWidget(
-                  sandraProfile,
-                  l10n.sandraProfileText,
-                  fontSize: fontSize,
+                horizontalSpaceMedium,
+                Expanded(
+                  child: ProfileWidget(
+                    sandraProfile,
+                    l10n.sandraProfileText,
+                    fontSize: fontSize,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           verticalSpaceMedium,
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: ProfileWidget(
-                  shandoProfile,
-                  l10n.shandoProfileText,
-                  fontSize: fontSize,
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: ProfileWidget(
+                    shandoProfile,
+                    l10n.shandoProfileText,
+                    fontSize: fontSize,
+                  ),
                 ),
-              ),
-              horizontalSpaceMedium,
-              Expanded(
-                child: ProfileWidget(
-                  savioProfile,
-                  l10n.savioProfileText,
-                  fontSize: fontSize,
+                horizontalSpaceMedium,
+                Expanded(
+                  child: ProfileWidget(
+                    savioProfile,
+                    l10n.savioProfileText,
+                    fontSize: fontSize,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           verticalSpaceMedium,
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: ProfileWidget(
-                  leonProfile,
-                  l10n.leonProfileText,
-                  fontSize: fontSize,
+          IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: ProfileWidget(
+                    leonProfile,
+                    l10n.leonProfileText,
+                    fontSize: fontSize,
+                  ),
                 ),
-              ),
-              horizontalSpaceMedium,
-              const Expanded(child: SizedBox()),
-            ],
+                horizontalSpaceMedium,
+                const Expanded(child: SizedBox()),
+              ],
+            ),
           ),
           verticalSpaceLarge,
         ],
