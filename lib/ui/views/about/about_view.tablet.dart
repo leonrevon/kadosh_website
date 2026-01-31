@@ -57,6 +57,15 @@ class _AboutViewTabletContent extends StatelessWidget {
             ),
             verticalSpaceLarge,
             Text(
+              l10n.aboutWelcome,
+              style: TextStyle(
+                fontSize: getResponsiveMassiveFontSize(context) / 1.617,
+                height: 2,
+              ),
+              textAlign: TextAlign.justify,
+            ),
+            verticalSpaceMedium,
+            Text(
               l10n.aboutVisionMissionMobile,
               style: TextStyle(
                 fontSize: getResponsiveLargeFontSize(context) / 1.617,
